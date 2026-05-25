@@ -6,12 +6,12 @@
     <div class="page-shell">
       <header class="site-header">
         <div class="brand">
-          <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+          <a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
         </div>
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="{{ "/" | relURL }}">Accueil</a>
-          <a href="{{ "/exposition/" | relURL }}">Exposition</a>
-          <a href="{{ "/propos/" | relURL }}">À propos</a>
+          <a href="{{ "/" | absURL }}">Accueil</a>
+          <a href="{{ "/exposition/" | absURL }}">Exposition</a>
+          <a href="{{ "/propos/" | absURL }}">À propos</a>
         </nav>
       </header>
 
@@ -21,7 +21,7 @@
 
       <footer class="site-footer">
         <p>{{ .Site.Params.description }}</p>
-        <p><a href="{{ "/" | relURL }}">Retour à l’accueil</a></p>
+        <p><a href="{{ "/" | absURL }}">Retour à l’accueil</a></p>
       </footer>
     </div>
     <script src="{{ "js/site.js" | absURL }}"></script>

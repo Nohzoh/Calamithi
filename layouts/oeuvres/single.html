@@ -33,14 +33,14 @@
   </div>
 
   <div class="work-navigation" aria-label="Navigation entre œuvres">
-    {{ with .PrevInSection }}<a class="nav-link nav-prev" href="{{ .RelPermalink }}">← Œuvre précédente</a>{{ end }}
+    {{ with .PrevInSection }}<a class="nav-link nav-prev" href="{{ .Permalink }}">← Œuvre précédente</a>{{ end }}
     <span class="progress-indicator">{{ $position }} / {{ len $pages }}</span>
-    {{ with .NextInSection }}<a class="nav-link nav-next" href="{{ .RelPermalink }}">Œuvre suivante →</a>{{ end }}
+    {{ with .NextInSection }}<a class="nav-link nav-next" href="{{ .Permalink }}">Œuvre suivante →</a>{{ end }}
   </div>
 
   <div class="work-actions">
-    <a class="text-link" href="{{ "/exposition/" | relURL }}">Retour à la galerie</a>
-    <a class="text-link" href="{{ "/" | relURL }}">Retour à l’accueil</a>
+    <a class="text-link" href="{{ "/exposition/" | absURL }}">Retour à la galerie</a>
+    <a class="text-link" href="{{ "/" | absURL }}">Retour à l’accueil</a>
   </div>
 </article>
 {{ end }}

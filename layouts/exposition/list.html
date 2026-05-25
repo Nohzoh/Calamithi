@@ -29,7 +29,7 @@
     <article class="gallery-card" data-series="{{ .Params.series | urlize }}">
       <a class="gallery-link" href="{{ .RelPermalink }}">
         <div class="gallery-figure">
-          {{ if $thumb }}<img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" loading="lazy">{{ end }}
+          {{ if $thumb }}<img src="{{ $thumb.RelPermalink | absURL }}" alt="{{ .Title }}" loading="lazy">{{ end }}
         </div>
         <div class="gallery-caption">
           <span class="gallery-title">{{ .Title }}</span>

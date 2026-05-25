@@ -1,5 +1,5 @@
 ---
-title: "Reflets d’atelier 2"
+title: "Reflets d’atelier"
 date: 2026-05-01
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"

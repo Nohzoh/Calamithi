@@ -9,7 +9,7 @@
   <div class="work-hero">
     {{ with .Resources.GetMatch .Params.hero }}
       {{ $hero := .Resize "1600x" }}
-      <img src="{{ $hero.RelPermalink }}" alt="{{ $.Title }}" loading="eager">
+      <img src="{{ $hero.RelPermalink | absURL }}" alt="{{ $.Title }}" loading="eager">
     {{ end }}
   </div>
 

@@ -1,5 +1,5 @@
 ---
-title: "Monochrome / Matière"
+title: "Cartographie de l'instable"
 description: "Une promenade silencieuse entre lumière, matière et temps."
 ---
 

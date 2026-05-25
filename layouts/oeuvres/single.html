@@ -14,20 +14,37 @@
   </div>
 
   <div class="work-meta">
-    <p class="eyebrow">{{ .Params.series }} · {{ .Params.location }}</p>
+    <p class="eyebrow">{{ .Params.series }}</p>
     <h1>{{ .Title }}</h1>
+    <p class="eyebrow">{{ .Params.year }} · {{ .Params.location }}</p>
     <div class="work-summary">
       <div>
-        <h2>Description</h2>
-        <p>{{ .Params.description }}</p>
+        <p>{{ .Description }}</p>
       </div>
       <div>
-        <h2>Intention</h2>
-        <p>{{ .Params.intention }}</p>
+        <h2>Informations</h2>
+        <p>{{ .Params.informations }}</p>
       </div>
-      <div>
-        <h2>Contexte</h2>
-        <p>{{ .Params.context }}</p>
+      <div class="price-table">
+        <h2>Prix</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Prix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30×20</td>
+              <td>{{ with .Params.prixpetit }}{{ . }}{{ else }}–{{ end }}</td>
+            </tr>
+            <tr>
+              <td>60×40</td>
+              <td>{{ with .Params.prixgrand }}{{ . }}{{ else }}–{{ end }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

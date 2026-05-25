@@ -3,7 +3,7 @@
   <div class="section-header">
     <p class="eyebrow">{{ cond .IsHome "Accueil" .Title }}</p>
     <h1>{{ .Title }}</h1>
-    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+    {{ with .Description }}<p>{{ . | replace "\n" "<br />\n" | safeHTML }}</p>{{ end }}
   </div>
   {{ if .IsSection }}
     <div class="content-body">

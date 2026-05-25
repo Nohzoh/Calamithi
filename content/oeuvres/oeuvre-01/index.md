@@ -1,14 +1,18 @@
 ---
-title: "Reflets d’atelier 2"
-date: 2026-05-01
+title: "Constellation terrestre"
+year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
-series: "Série atelier"
-location: "Paris"
-description: "Un instant suspendu dans la lumière blanche d’un atelier vide."
-intention: "Explorer la relation entre matériau et absence, avec une attention portée aux détails simples."
-context: "Photographié lors d’une matinée documentaire entre architectes et artisans."
+series: "Nocturnes électriques"
+location: "Paris - Parc de la Vilette"
+description: |
+  Au cœur d’un paysage nocturne transformé par des installations lumineuses éphémères, Constellation terrestre brouille volontairement les frontières entre le végétal, le ciel et la matière lumineuse. Les points de lumière, disséminés au pied des arbres comme des fleurs artificielles, composent une cartographie sensible où le regard hésite entre paysage réel et apparition.
+
+  Par le jeu du flou et du bokeh, l’image abandonne toute fonction documentaire pour devenir une expérience perceptive. Les sources lumineuses semblent flotter dans l’espace comme des constellations descendues à hauteur humaine, transformant le parc en territoire onirique.
+
+  L’œuvre interroge ainsi notre manière d’habiter la nuit contemporaine : une nuit où la technologie devient poésie visuelle, où la lumière cesse d’éclairer pour commencer à rêver.
+informations: "Caisse américaine."
+prixpetit: "180"
+prixgrand: "360"
 order: 1
 ---
-
-Forme et calme s’équilibrent autour d’une présence évoquée plutôt que montrée.

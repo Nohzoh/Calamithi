@@ -1,0 +1,19 @@
+---
+title: "Les arbres qui rêvent"
+year: 2025
+thumbnail: "thumbnail.jpg"
+hero: "photo.jpg"
+series: "Reflets du vivant"
+location: "Yerres"
+description: |
+  À travers le mouvement volontaire de l’appareil photographique (ICM) et le jeu des reflets sur l’eau, Les arbres qui rêvent transforme un paysage végétal en une vision flottante et presque picturale. Les troncs se dissolvent dans une matière lumineuse mouvante où le regard hésite entre photographie, peinture impressionniste et souvenir fragmentaire.
+
+  Les vibrations du vert, les verticalités instables et la douceur diffuse des contours donnent à l’image une qualité méditative, comme si le paysage lui-même semblait dériver entre veille et songe. La nature n’est plus ici un décor fixe, mais une présence vivante en perpétuelle transformation.
+
+  Par cette approche sensorielle du paysage, l’œuvre cherche moins à représenter un lieu qu’à traduire une sensation intérieure : celle d’un monde végétal traversé par la mémoire, la lumière et le mouvement.
+informations: "Caisse américaine."
+prixpetit: "180"
+prixgrand: "360"
+order: 7
+---
+

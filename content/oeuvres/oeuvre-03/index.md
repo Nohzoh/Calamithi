@@ -1,14 +1,18 @@
 ---
-title: "Grain de lumière"
-date: 2026-05-10
+title: "Les oiseaux quittent la ville"
+year: 2026
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
-series: "Paysage"
-location: "Bretagne"
-description: "Une scène tranquille de côtes rocheuses éclairées par un soleil bas."
-intention: "Rappeler la matière du paysage et la qualité du silence dans la lumière du soir."
-context: "Photographié lors d’un court voyage de repérage, avec l’intention de conserver une tension douce entre ciel et pierre."
+series: "Horizons fragiles"
+location: "Rouen"
+description: |
+  Photographiée depuis la terrasse d’un bar au cœur de Rouen, Les oiseaux quittent la ville capte un instant suspendu entre immobilité urbaine et mouvement soudain. Les façades à colombages, plongées dans un semi contre-jour de fin de journée hivernale, dessinent un corridor sombre au sein duquel surgit une envolée inattendue d’oiseaux.
+
+  La verticalité des bâtiments enferme le regard tandis que le ciel clair ouvre une échappée fragile vers un ailleurs invisible. Cette migration improvisée transforme la scène quotidienne en apparition presque lyrique : un mouvement collectif qui semble porter avec lui le désir d’un départ, d’une élévation ou d’une promesse silencieuse.
+
+  Par son équilibre entre architecture, lumière et mouvement vivant, l’œuvre interroge la possibilité d’un horizon poétique au cœur même de l’espace urbain. Les oiseaux deviennent ici les messagers fugitifs d’un monde encore capable d’échapper à la pesanteur du réel.
+informations: "Caisse américaine."
+prixpetit: "180"
+prixgrand: "360"
 order: 3
 ---
-
-La lumière devient texture, et la mer prend une forme presque sculpturale.

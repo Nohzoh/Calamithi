@@ -1,5 +1,5 @@
 ---
-title: "Exposition"
+title: "Cartographie de l'instable"
 description: "Galerie d’œuvres photographiques organisée comme un parcours de lecture."
 ---
 

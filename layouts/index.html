@@ -3,7 +3,7 @@
   <div class="hero-copy">
     <p class="eyebrow">Exposition photographique</p>
     <h1>{{ .Title }}</h1>
-    <p class="hero-text">{{ .Params.description }}</p>
+    <p class="hero-text">{{ .Description | replace "\n" "<br />\n" | safeHTML }}</p>
     <div class="hero-actions">
       <a class="button button-primary" href="{{ "exposition/" | absURL }}">Entrer dans l’exposition</a>
     </div>

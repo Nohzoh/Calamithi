@@ -1,14 +1,19 @@
 ---
-title: "Reflets d’atelier"
-date: 2026-05-01
+title: "Les ombres savent"
+year: 2026
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
-series: "Série atelier"
-location: "Paris"
-description: "Un instant suspendu dans la lumière blanche d’un atelier vide."
-intention: "Explorer la relation entre matériau et absence, avec une attention portée aux détails simples."
-context: "Photographié lors d’une matinée documentaire entre architectes et artisans."
-order: 1
+series: "Mémoire des passages"
+location: "Vincennes"
+description: |
+  Saisie en pleine après-midi dans une rue silencieuse de Vincennes, Les ombres savent transforme une façade ordinaire en espace de projection mentale. Les volets fermés, écrasés par une lumière dense et verticale, deviennent moins un élément architectural qu’un seuil opaque entre le visible et l’imaginaire.
+
+  L’ombre graphique qui traverse l’image introduit une tension discrète : quelque chose semble suspendu derrière ces surfaces closes. La scène évoque autant la torpeur estivale que l’intimité cachée d’un intérieur inaccessible — une sieste dans la pénombre, des murmures étouffés, ou la trace invisible d’une présence humaine.
+
+  Par son dépouillement formel, l’œuvre joue sur la puissance évocatrice du hors-champ. Ce qui importe ici n’est pas ce qui est montré, mais ce que les formes, la chaleur et la lumière laissent deviner.
+informations: "Caisse américaine."
+prixpetit: "180"
+prixgrand: "360"
+order: 4
 ---
 
-Forme et calme s’équilibrent autour d’une présence évoquée plutôt que montrée.

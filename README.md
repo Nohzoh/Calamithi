@@ -24,7 +24,9 @@ thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Série"
 location: "Lieu"
-description: "Texte de présentation"
+description: |
+  Première ligne de description.
+  Deuxième ligne avec saut de ligne.
 intention: "Intention artistique"
 context: "Contexte de prise de vue"
 order: 3

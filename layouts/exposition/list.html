@@ -3,7 +3,7 @@
   <div class="section-header">
     <p class="eyebrow">Exposition</p>
     <h1>{{ .Title }}</h1>
-    <p>{{ .Params.description }}</p>
+    <p>{{ .Description | replace "\n" "<br />\n" | safeHTML }}</p>
   </div>
 </section>
 

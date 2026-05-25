@@ -34,6 +34,7 @@
         <div class="gallery-caption">
           <span class="gallery-title">{{ .Title }}</span>
           <span class="gallery-meta">{{ .Params.series }} · {{ .Params.location }}</span>
+          {{ with .Params.photographer }}<span class="image-credit">Photo : {{ . }}</span>{{ end }}
         </div>
       </a>
     </article>

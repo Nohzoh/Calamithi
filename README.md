@@ -92,3 +92,15 @@ Si vous souhaitez utiliser un domaine personnalisé, remplacez le contenu de `st
 - Balises `rel="canonical"`
 - Navigation simple
 - Contenu structuré
+
+## Droits d’auteur et licences
+
+Le site inclut une page dédiée `Droits d’utilisation`, ainsi que des mentions de droits d’auteur visibles dans le pied de page. Les fichiers `COPYRIGHT.md` et `LICENSE-CONTENT.md` à la racine distinguent clairement le code du site et les œuvres artistiques.
+
+Les variables de droits sont configurables dans `config.toml` :
+
+- `copyright_owner`
+- `copyright_year`
+- `contact_email`
+- `rights_statement`
+- `watermark_enabled`

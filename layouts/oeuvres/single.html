@@ -26,7 +26,9 @@
       {{ $hero := .Resize "1600x" }}
       <img src="{{ $hero.RelPermalink | absURL }}" alt="{{ $.Title }}" loading="eager">
     {{ end }}
+    {{ if and .Site.Params.watermark_enabled .Params.photographer }}<div class="image-watermark">Photo : {{ .Params.photographer }}</div>{{ end }}
   </div>
+  {{ with .Params.photographer }}<p class="image-credit">Photo : {{ . }}</p>{{ end }}
 
   <div class="work-meta">
     <p class="eyebrow">{{ .Params.series }}</p>
@@ -40,27 +42,17 @@
         <h2>Informations</h2>
         <p>{{ .Params.informations }}</p>
       </div>
-      <div class="price-table">
-        <h2>Prix</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Dimension</th>
-              <th>Prix</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>30×20</td>
-              <td>{{ with .Params.prixpetit }}{{ . }}{{ else }}–{{ end }}</td>
-            </tr>
-            <tr>
-              <td>60×40</td>
-              <td>{{ with .Params.prixgrand }}{{ . }}{{ else }}–{{ end }}</td>
-            </tr>
-          </tbody>
-        </table>
+      {{ $hasPetit := and .Params.dimspetit .Params.prixpetit }}
+      {{ $hasGrand := and .Params.dimsgrand .Params.prixgrand }}
+      {{ if or $hasPetit $hasGrand }}
+      <div>
+        <h2>Formats & Tarifs</h2>
+        <ul>
+          {{ if $hasPetit }}<li>{{ .Params.dimspetit }} cm - {{ .Params.prixpetit }}</li>{{ end }}
+          {{ if $hasGrand }}<li>{{ .Params.dimsgrand }} cm - {{ .Params.prixgrand }}</li>{{ end }}
+        </ul>
       </div>
+      {{ end }}
     </div>
   </div>
 

@@ -21,6 +21,8 @@
 
       <footer class="site-footer">
         <p>{{ .Site.Params.description }}</p>
+        <p>© {{ .Site.Params.copyright_year }} {{ .Site.Params.copyright_owner }}. Tous droits réservés.<br>{{ .Site.Params.rights_statement }}</p>
+        <p><a href="{{ "droits-utilisation/" | absURL }}">Droits d’utilisation</a></p>
         <p><a href="{{ .Site.BaseURL }}">Retour à l’accueil</a></p>
       </footer>
     </div>

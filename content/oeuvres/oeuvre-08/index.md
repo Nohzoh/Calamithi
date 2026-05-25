@@ -11,9 +11,11 @@ description: |
   Les contrastes entre les teintes orangées et les profondeurs bleutées créent une tension visuelle proche d’un feu intérieur surgissant au cœur du froid automnal. L’image oscille ainsi entre paysage végétal, phénomène incandescent et abstraction pure, sans jamais se fixer totalement.
 
   Dans cet univers onirique, la lumière n’éclaire plus le réel : elle le consume, le déforme et le réinvente. L’œuvre propose une expérience sensorielle où la matière semble traversée par une énergie mouvante, à la frontière du rêve et de la disparition.
-informations: "Caisse américaine."
-prixpetit: "180"
-prixgrand: "360"
+informations: "Tirage sur toile monté sur caisse américaine. Année de production: 2026."
+dimspetit: "20 x 30"
+dimsgrand: "40 x 60"
+prixpetit: "215.00 €"
+prixgrand: "350.00 €"
 order: 8
 ---
 

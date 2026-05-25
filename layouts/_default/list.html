@@ -7,7 +7,7 @@
   </div>
   {{ if .IsSection }}
     <div class="content-body">
-      {{ .Summary }}
+      {{ if .Content }}{{ .Content }}{{ else }}{{ .Summary }}{{ end }}
     </div>
   {{ end }}
 </section>

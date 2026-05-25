@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="content-page">
+  <div class="content-body">
+    <h1>{{ .Title }}</h1>
+    <p>Cette page présente les conditions d’utilisation des photographies, textes, descriptions, intentions artistiques et contenus publiés sur {{ .Site.Title }}.</p>
+
+    <h2>Titulaire des droits</h2>
+    <p>Le titulaire des droits est <strong>{{ .Site.Params.copyright_owner }}</strong>, propriétaire des contenus créatifs et artistiques publiés sur ce site.</p>
+
+    <h2>Champ de protection</h2>
+    <p>Les photographies, textes, descriptions, intentions artistiques et contenus du livret sont protégés par le droit d’auteur.</p>
+
+    <h2>Conditions d’utilisation</h2>
+    <p>Les contenus présents sur ce site sont destinés à une consultation publique. Toute reproduction, redistribution ou utilisation doit faire l’objet d’une autorisation explicite.</p>
+
+    <h2>Utilisation personnelle</h2>
+    <p>Vous pouvez consulter et partager le lien du site dans un cadre personnel et non commercial, à condition de conserver les mentions de droit d’auteur et d’indiquer la source.</p>
+
+    <h2>Utilisation commerciale</h2>
+    <p>Toute utilisation commerciale des images, textes et contenus nécessite une autorisation écrite du titulaire des droits.</p>
+
+    <h2>Demande d’autorisation</h2>
+    <p>Pour toute demande d’autorisation, merci de préciser l’usage prévu et de contacter le titulaire des droits.</p>
+
+    <h2>Contact</h2>
+    <p>Contact : <a href="mailto:{{ .Site.Params.contact_email }}">{{ .Site.Params.contact_email }}</a></p>
+
+    <p>{{ .Site.Params.rights_statement }}</p>
+  </div>
+</article>
+{{ end }}

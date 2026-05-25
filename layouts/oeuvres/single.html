@@ -1,8 +1,23 @@
 {{ define "main" }}
-{{ $pages := sort (where site.RegularPages "Section" "oeuvres") "Params.order" }}
+{{ $allPages := where site.RegularPages "Section" "oeuvres" }}
+{{ $maxOrder := 0 }}
+{{ range $allPages }}{{ if gt (.Params.order | int) $maxOrder }}{{ $maxOrder = .Params.order | int }}{{ end }}{{ end }}
+{{ $pages := slice }}
+{{ range seq 1 $maxOrder }}
+  {{ $currentOrder := . }}
+  {{ range $allPages }}
+    {{ if eq (.Params.order | int) $currentOrder }}
+      {{ $pages = $pages | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ $position := 0 }}
+{{ $currentIndex := 0 }}
 {{ range $index, $page := $pages }}
-  {{ if eq $page.File.Path .File.Path }}{{ $position = add $index 1 }}{{ end }}
+  {{ if eq $page.File.Path $.File.Path }}
+    {{ $position = add $index 1 }}
+    {{ $currentIndex = $index }}
+  {{ end }}
 {{ end }}
 
 <article class="work-detail">
@@ -50,9 +65,9 @@
   </div>
 
   <div class="work-navigation" aria-label="Navigation entre œuvres">
-    {{ with .PrevInSection }}<a class="nav-link nav-prev" href="{{ .Permalink }}">← Œuvre précédente</a>{{ end }}
+    {{ if gt $currentIndex 0 }}<a class="nav-link nav-prev" href="{{ (index $pages (sub $currentIndex 1)).Permalink }}">← Œuvre précédente</a>{{ end }}
     <span class="progress-indicator">{{ $position }} / {{ len $pages }}</span>
-    {{ with .NextInSection }}<a class="nav-link nav-next" href="{{ .Permalink }}">Œuvre suivante →</a>{{ end }}
+    {{ if lt $currentIndex (sub (len $pages) 1) }}<a class="nav-link nav-next" href="{{ (index $pages (add $currentIndex 1)).Permalink }}">Œuvre suivante →</a>{{ end }}
   </div>
 
   <div class="work-actions">

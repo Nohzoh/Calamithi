@@ -226,6 +226,27 @@ button, .button {
 .work-summary p {
   margin: 0;
   color: var(--muted);
+  white-space: pre-line;
+}
+.price-table table {
+  width: auto;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  table-layout: auto;
+}
+.price-table th,
+.price-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.price-table th {
+  background: #f2ede5;
+  font-weight: 600;
+}
+.price-table tbody tr:nth-child(odd) {
+  background: rgba(31, 26, 22, 0.03);
 }
 .work-navigation {
   display: flex;

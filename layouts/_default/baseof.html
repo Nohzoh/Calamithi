@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>{{ partial "head.html" . }}</head>
+  <body class="page {{ if .IsHome }}home{{ else if eq .Section "oeuvres" }}oeuvre-page{{ else if eq .Section "propos" }}propos-page{{ else if eq .Section "exposition" }}exposition-page{{ end }}">
+    <a class="skip-link" href="#main-content">Passer au contenu</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+        </div>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="{{ "/" | relURL }}">Accueil</a>
+          <a href="{{ "/exposition/" | relURL }}">Exposition</a>
+          <a href="{{ "/propos/" | relURL }}">À propos</a>
+        </nav>
+      </header>
+
+      <main id="main-content" class="site-main" tabindex="-1">
+        {{ block "main" . }}{{ end }}
+      </main>
+
+      <footer class="site-footer">
+        <p>{{ .Site.Params.description }}</p>
+        <p><a href="{{ "/" | relURL }}">Retour à l’accueil</a></p>
+      </footer>
+    </div>
+    <script src="{{ "js/site.js" | relURL }}"></script>
+  </body>
+</html>

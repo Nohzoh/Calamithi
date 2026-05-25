@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="section-intro">
+  <div class="section-header">
+    <p class="eyebrow">{{ cond .IsHome "Accueil" .Title }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+  </div>
+  {{ if .IsSection }}
+    <div class="content-body">
+      {{ .Summary }}
+    </div>
+  {{ end }}
+</section>
+{{ end }}

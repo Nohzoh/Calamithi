@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="hero-landing">
+  <div class="hero-copy">
+    <p class="eyebrow">Exposition photographique</p>
+    <h1>{{ .Title }}</h1>
+    <p class="hero-text">{{ .Params.description }}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ "/exposition/" | relURL }}">Entrer dans l’exposition</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="{{ "images/cover.jpg" | relURL }}" alt="Couverture de l’exposition" loading="eager">
+  </div>
+</section>
+
+<section class="home-intro">
+  <div class="content-block">
+    <h2>Un catalogue pour l’œil</h2>
+    <p>Ce livret propose une expérience de lecture immersive pour une galerie photographique en ligne, avec une mise en page calme, aérée et adaptée à tous les écrans.</p>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,19 @@
+baseURL = "https://example.github.io/mon-livret/"
+locale = "fr-FR"
+title = "Livret d’exposition photographique"
+enableRobotsTXT = true
+paginate = 12
+uglyURLs = false
+relativeURLs = true
+canonifyURLs = false
+[params]
+  description = "Catalogue photographique minimaliste pour exposition en ligne."
+  author = "Photographe"
+  domain = "example.com"
+  themeColor = "#f7f3ee"
+  backgroundColor = "#f7f3ee"
+  mainFont = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  accentFont = "Cormorant Garamond, Georgia, serif"
+  galleryFilter = true
+[permalinks]
+  oeuvres = "/oeuvres/:slug/"

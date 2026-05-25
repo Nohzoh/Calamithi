@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section class="section-intro">
+  <div class="section-header">
+    <p class="eyebrow">Exposition</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.description }}</p>
+  </div>
+</section>
+
+{{ $oeuvres := sort (where site.RegularPages "Section" "oeuvres") "Params.order" }}
+{{ $series := slice }}
+{{ range $oeuvres }}
+  {{ if and .Params.series (not (in $series .Params.series)) }}
+    {{ $series = $series | append .Params.series }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $series) 1 }}
+  <div class="gallery-filter" aria-label="Filtrer par série">
+    <button data-filter="all" class="filter-button active">Toutes les séries</button>
+    {{ range $series }}<button data-filter="{{ . | urlize }}" class="filter-button">{{ . }}</button>{{ end }}
+  </div>
+{{ end }}
+
+<section class="gallery-grid" aria-label="Galerie des œuvres">
+  {{ range $oeuvres }}
+    {{ $thumb := .Resources.GetMatch .Params.thumbnail }}
+    {{ with $thumb }}{{ $thumb = .Fill "720x720 center" }}{{ end }}
+    <article class="gallery-card" data-series="{{ .Params.series | urlize }}">
+      <a class="gallery-link" href="{{ .RelPermalink }}">
+        <div class="gallery-figure">
+          {{ if $thumb }}<img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" loading="lazy">{{ end }}
+        </div>
+        <div class="gallery-caption">
+          <span class="gallery-title">{{ .Title }}</span>
+          <span class="gallery-meta">{{ .Params.series }} · {{ .Params.location }}</span>
+        </div>
+      </a>
+    </article>
+  {{ end }}
+</section>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ $pages := sort (where site.RegularPages "Section" "oeuvres") "Params.order" }}
+{{ $position := 0 }}
+{{ range $index, $page := $pages }}
+  {{ if eq $page.File.Path .File.Path }}{{ $position = add $index 1 }}{{ end }}
+{{ end }}
+
+<article class="work-detail">
+  <div class="work-hero">
+    {{ with .Resources.GetMatch .Params.hero }}
+      {{ $hero := .Resize "1600x" }}
+      <img src="{{ $hero.RelPermalink }}" alt="{{ $.Title }}" loading="eager">
+    {{ end }}
+  </div>
+
+  <div class="work-meta">
+    <p class="eyebrow">{{ .Params.series }} · {{ .Params.location }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="work-summary">
+      <div>
+        <h2>Description</h2>
+        <p>{{ .Params.description }}</p>
+      </div>
+      <div>
+        <h2>Intention</h2>
+        <p>{{ .Params.intention }}</p>
+      </div>
+      <div>
+        <h2>Contexte</h2>
+        <p>{{ .Params.context }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="work-navigation" aria-label="Navigation entre œuvres">
+    {{ with .PrevInSection }}<a class="nav-link nav-prev" href="{{ .RelPermalink }}">← Œuvre précédente</a>{{ end }}
+    <span class="progress-indicator">{{ $position }} / {{ len $pages }}</span>
+    {{ with .NextInSection }}<a class="nav-link nav-next" href="{{ .RelPermalink }}">Œuvre suivante →</a>{{ end }}
+  </div>
+
+  <div class="work-actions">
+    <a class="text-link" href="{{ "/exposition/" | relURL }}">Retour à la galerie</a>
+    <a class="text-link" href="{{ "/" | relURL }}">Retour à l’accueil</a>
+  </div>
+</article>
+{{ end }}

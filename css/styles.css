@@ -203,12 +203,15 @@ button, .button {
   margin-bottom: 2rem;
   border-radius: 36px;
   overflow: hidden;
-  background: #eae5de;
+  background: var(--bg);
+  max-height: 90vh;
 }
 .work-hero img {
   width: 100%;
   height: auto;
+  max-height: 90vh;
   display: block;
+  object-fit: contain;
 }
 .work-meta {
   display: grid;

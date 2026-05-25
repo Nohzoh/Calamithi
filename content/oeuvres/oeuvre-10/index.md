@@ -11,7 +11,7 @@ description: |
   Les couleurs saturées, les éclats lumineux et les superpositions de matières évoquent les traces persistantes d’une célébration disparue : lumières de fête, souvenirs fragmentaires, réminiscences visuelles qui continuent de vibrer après l’événement lui-même.
 
   À travers cette approche macro et abstraite, l’œuvre explore la capacité de la lumière à désorganiser les formes, jusqu’à faire émerger un langage purement chromatique où le regard se perd volontairement entre matière, reflet et illusion.
-informations: "Tirage sur toile monté sur caisse américaine. Année de production: 2026."
+informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
 dimspetit: "30 x 20"
 dimsgrand: "60 x 40"
 prixpetit: "160.00 €"

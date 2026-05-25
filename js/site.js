@@ -31,4 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // Ces mesures sont uniquement dissuasives et ne constituent pas une protection technique réelle.
+  document.querySelectorAll('img').forEach((img) => {
+    img.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+    img.addEventListener('dragstart', function (event) {
+      event.preventDefault();
+    });
+    img.addEventListener('mousedown', function (event) {
+      if (event.target === img) {
+        event.preventDefault();
+      }
+    });
+  });
 });

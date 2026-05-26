@@ -11,11 +11,10 @@ description: |
   Les spirales lumineuses semblent traversées par une énergie vivante, comme une matière végétale en expansion continue. Les lignes fluides et les vibrations chromatiques créent une sensation d’absorption progressive du regard, jusqu’à faire disparaître toute stabilité spatiale.
 
   À travers cette hybridation entre photographie et manipulation numérique, l’œuvre interroge la manière dont les images contemporaines peuvent devenir des paysages intérieurs : des territoires mouvants où mémoire visuelle, perception et imaginaire fusionnent dans une même expérience hypnotique.
-informations: "Caisse américaine."
-dimspetit: ""
-dimsgrand: "40 x 50"
-prixpetit: ""
-prixgrand: "160.00 €"
+informations: "Tirage sur toile sans encadrement (choix artistique volontaire). Année de production : 2026."
+formats:
+  - size: "40 x 50"
+    price: "160.00 €"
 order: 12
 ---
 

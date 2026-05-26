@@ -1,6 +1,6 @@
 ---
 title: "Ce que le vent emporte"
-year: 2025
+year: 2026
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Fragilités silencieuses"
@@ -12,9 +12,12 @@ description: |
 
   Par son minimalisme assumé, l’œuvre invite à une contemplation silencieuse où la fragilité du vivant rejoint celle des souvenirs et des instants fugitifs.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "20 x 30"
-dimsgrand: "40 x 60"
-prixpetit: "160.00 €"
-prixgrand: "270.00 €"
+formats:
+  - size: "20 x 30"
+    price: "160.00 €"
+
+  - size: "40 x 60"
+    price: "270.00 €"
 order: 2
 ---
+

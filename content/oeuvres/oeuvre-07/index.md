@@ -12,10 +12,12 @@ description: |
 
   Par cette approche sensorielle du paysage, l’œuvre cherche moins à représenter un lieu qu’à traduire une sensation intérieure : celle d’un monde végétal traversé par la mémoire, la lumière et le mouvement.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "24 x 30"
-dimsgrand: "48 x 60"
-prixpetit: "160.00 €"
-prixgrand: "270.00 €"
+formats:
+  - size: "24 x 30"
+    price: "160.00 €"
+
+  - size: "48 x 60"
+    price: "270.00 €"
 order: 7
 ---
 

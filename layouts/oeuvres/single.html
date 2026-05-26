@@ -42,14 +42,22 @@
         <h2>Informations</h2>
         <p>{{ .Params.informations }}</p>
       </div>
-      {{ $hasPetit := and .Params.dimspetit .Params.prixpetit }}
-      {{ $hasGrand := and .Params.dimsgrand .Params.prixgrand }}
-      {{ if or $hasPetit $hasGrand }}
+      {{ $formats := .Params.formats }}
+      {{ if not $formats }}
+        {{ $formats = slice }}
+        {{ if and .Params.dimspetit .Params.prixpetit }}{{ $formats = $formats | append (dict "size" .Params.dimspetit "price" .Params.prixpetit "stripe_url" .Params.stripepetit) }}{{ end }}
+        {{ if and .Params.dimsgrand .Params.prixgrand }}{{ $formats = $formats | append (dict "size" .Params.dimsgrand "price" .Params.prixgrand "stripe_url" .Params.stripegrand) }}{{ end }}
+      {{ end }}
+      {{ if gt (len $formats) 0 }}
       <div>
         <h2>Formats & Tarifs</h2>
         <ul>
-          {{ if $hasPetit }}<li>{{ .Params.dimspetit }} cm - {{ .Params.prixpetit }}</li>{{ end }}
-          {{ if $hasGrand }}<li>{{ .Params.dimsgrand }} cm - {{ .Params.prixgrand }}</li>{{ end }}
+          {{ range $formats }}
+            <li>
+              <span>{{ .size }} - {{ .price }}
+              {{ with .stripe_url }} - <a class="format-link" href="{{ . }}" target="_blank" rel="noopener">[ 🛒 Acheter ↗️ ]</a>{{ end }}</span>
+            </li>
+          {{ end }}
         </ul>
       </div>
       {{ end }}

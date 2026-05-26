@@ -1,6 +1,6 @@
 ---
 title: "Lignes de nuit"
-year: 2026
+year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Pulsations urbaines"
@@ -12,10 +12,12 @@ description: |
 
   À travers cette abstraction du paysage nocturne, l’œuvre explore la manière dont la mémoire visuelle reconstruit les espaces urbains : non comme des formes fixes, mais comme des flux mouvants, traversés de lumières, de vitesses et de rémanences.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "30 x 20"
-dimsgrand: "60 x 40"
-prixpetit: "160.00 €"
-prixgrand: "270.00 €"
+formats:
+  - size: "30 x 20"
+    price: "160.00 €"
+
+  - size: "60 x 40"
+    price: "270.00 €"
 order: 6
 ---
 

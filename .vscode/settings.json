@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^hugo --minify$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

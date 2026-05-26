@@ -12,9 +12,12 @@ description: |
 
   Par son équilibre entre architecture, lumière et mouvement vivant, l’œuvre interroge la possibilité d’un horizon poétique au cœur même de l’espace urbain. Les oiseaux deviennent ici les messagers fugitifs d’un monde encore capable d’échapper à la pesanteur du réel.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "20 x 30"
-dimsgrand: "40 x 60"
-prixpetit: "215.00 €"
-prixgrand: "350.00 €"
+formats:
+  - size: "20 x 30"
+    price: "215.00 €"
+
+  - size: "40 x 60"
+    price: "350.00 €"
 order: 3
 ---
+

@@ -12,9 +12,14 @@ description: |
 
   L’œuvre interroge ainsi notre manière d’habiter la nuit contemporaine : une nuit où la technologie devient poésie visuelle, où la lumière cesse d’éclairer pour commencer à rêver.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "30 x 20"
-dimsgrand: "60 x 40"
-prixpetit: "140.00 €"
-prixgrand: "240.00 €"
+formats:
+  - size: "30 x 20"
+    price: "140.00 €"
+    stripe_url: "https://buy.stripe.com/00w14p1kB5SQe613bK5Rm00"
+
+  - size: "60 x 40"
+    price: "240.00 €"
+    stripe_url: "https://buy.stripe.com/7sY14pgfv5SQge93bK5Rm01"
 order: 1
 ---
+

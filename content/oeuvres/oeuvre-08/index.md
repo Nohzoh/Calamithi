@@ -12,10 +12,12 @@ description: |
 
   Dans cet univers onirique, la lumière n’éclaire plus le réel : elle le consume, le déforme et le réinvente. L’œuvre propose une expérience sensorielle où la matière semble traversée par une énergie mouvante, à la frontière du rêve et de la disparition.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "20 x 30"
-dimsgrand: "40 x 60"
-prixpetit: "215.00 €"
-prixgrand: "350.00 €"
+formats:
+  - size: "20 x 30"
+    price: "215.00 €"
+
+  - size: "40 x 60"
+    price: "350.00 €"
 order: 8
 ---
 

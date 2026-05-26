@@ -14,10 +14,12 @@ description: |
 
   Présentée simultanément dans un espace municipal dans le cadre de l’événement Entrez, c’est ouvert, cette œuvre établit un dialogue discret avec l’exposition Cartographie de l’instable, prolongeant hors du studio photo cette exploration des perceptions fragiles et des paysages urbains transformés par la lumière et le reflet.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "20 x 30"
-dimsgrand: "40 x 60"
-prixpetit: "215"
-prixgrand: "350"
+formats:
+  - size: "20 x 30"
+    price: "215 €"
+
+  - size: "40 x 60"
+    price: "350 €"
 order: 13
 ---
 

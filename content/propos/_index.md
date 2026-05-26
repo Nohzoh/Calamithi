@@ -1,5 +1,6 @@
 ---
 title: "À propos"
+subtitle: "Démarche artistique"
 ---
 
 Chez CALAMITHI, la lumière n’éclaire jamais uniquement le monde : elle le déplace, le fragmente et le réinvente. Les œuvres interrogent notre rapport à la mémoire visuelle, à l’instabilité des sensations et à la manière dont le regard construit ses propres fictions. Chaque image apparaît comme la trace d’un basculement - un instant où le réel se dérobe suffisamment pour laisser émerger une dimension plus intérieure, presque onirique.

@@ -29,8 +29,19 @@ description: |
   Deuxième ligne avec saut de ligne.
 intention: "Intention artistique"
 context: "Contexte de prise de vue"
+formats:
+  - size: "30 x 20"
+    price: "140,00 €"
+    stripe_url: "https://buy.stripe.com/example"
+  - size: "60 x 40"
+    price: "240,00 €"
+    stripe_url: "https://buy.stripe.com/example"
 order: 3
 ```
+
+- Le champ `formats` permet de définir plusieurs tailles/prix.
+- `stripe_url` peut être défini pour chaque format.
+- Le template garde une compatibilité avec les anciens champs `dimspetit`, `dimsgrand`, `prixpetit`, `prixgrand` si nécessaire.
 
 3. Placez les images à côté du fichier :
    - `thumbnail.jpg`

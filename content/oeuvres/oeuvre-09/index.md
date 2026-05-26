@@ -1,6 +1,6 @@
 ---
 title: "Le bateau des mirages"
-year: 2025
+year: 2023
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Rémanences liquides"
@@ -12,10 +12,12 @@ description: |
 
   Entre reflet, abstraction et mémoire visuelle, le bateau cesse ici d’être un simple objet maritime pour devenir une figure de passage : un mirage suspendu entre stabilité et disparition.
 informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
-dimspetit: "24 x 30"
-dimsgrand: "48 x 60"
-prixpetit: "180.00 €"
-prixgrand: "290.00 €"
+formats:
+  - size: "24 x 30"
+    price: "180.00 €"
+
+  - size: "48 x 60"
+    price: "290.00 €"
 order: 9
 ---
 

@@ -125,6 +125,11 @@ button, .button {
   border-radius: 999px;
   font-weight: 600;
 }
+.button-primary.button-small {
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
+  min-width: auto;
+}
 .hero-visual {
   border-radius: 32px;
   overflow: hidden;
@@ -241,6 +246,40 @@ button, .button {
 .work-summary {
   display: grid;
   gap: 2rem;
+}
+.work-summary ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+}
+.work-summary ul li {
+  margin: 0.85rem 0;
+}
+.format-entry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+.format-entry span {
+  color: var(--text);
+  font-weight: 600;
+}
+.format-link {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.format-link:hover,
+.format-link:focus {
+  color: #2f2c28;
+}
+.button-primary.button-small {
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
 }
 .work-summary h2 {
   margin: 0 0 0.75rem;

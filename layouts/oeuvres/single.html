@@ -55,7 +55,7 @@
           {{ range $formats }}
             <li>
               <span>{{ .size }} - {{ .price }}
-              {{ with .stripe_url }} - <a class="format-link" href="{{ . }}" target="_blank" rel="noopener">[ 🛒 Acheter ↗️ ]</a>{{ end }}</span>
+              {{ with .stripe_url }} <a class="format-link" href="{{ . }}" target="_blank" rel="noopener">[ 🛒 Acheter ↗️ ]</a>{{ end }}</span>
             </li>
           {{ end }}
         </ul>

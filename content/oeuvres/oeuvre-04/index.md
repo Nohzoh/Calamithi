@@ -15,9 +15,11 @@ informations: "Tirage sur toile monté sur caisse américaine. Année de product
 formats:
   - size: "20 x 30"
     price: "140.00 €"
+    stripe_url: "https://buy.stripe.com/4gMeVf5AR3KIge9fYw5Rm06"
 
   - size: "40 x 60"
     price: "240.00 €"
+    stripe_url: "https://buy.stripe.com/eVqbJ34wNepm5zv7s05Rm07"
 order: 4
 ---
 

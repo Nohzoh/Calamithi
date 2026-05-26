@@ -15,6 +15,7 @@ informations: "Tirage sur papier fine art Hahnemühle Museum Etching. Cadre alum
 formats:
   - size: "40 x 60"
     price: "220.00 €"
+    stripe_url: "https://buy.stripe.com/4gMfZj7IZ80Y3rnh2A5Rm0o"
 order: 14
 ---
 

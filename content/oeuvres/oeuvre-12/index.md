@@ -15,6 +15,7 @@ informations: "Tirage sur toile sans encadrement (choix artistique volontaire). 
 formats:
   - size: "40 x 50"
     price: "160.00 €"
+    stripe_url: "https://buy.stripe.com/9B65kF4wN80YbXT4fO5Rm0l"
 order: 12
 ---
 

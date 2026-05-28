@@ -11,7 +11,7 @@ description: |
   Les vibrations du vert, les verticalités instables et la douceur diffuse des contours donnent à l’image une qualité méditative, comme si le paysage lui-même semblait dériver entre veille et songe. La nature n’est plus ici un décor fixe, mais une présence vivante en perpétuelle transformation.
 
   Par cette approche sensorielle du paysage, l’œuvre cherche moins à représenter un lieu qu’à traduire une sensation intérieure : celle d’un monde végétal traversé par la mémoire, la lumière et le mouvement.
-informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
+informations: "Tirage sur toile monté sur caisse américaine noire. Tirage limité à 12 exemplaires tous formats et supports confondus. Année de production : 2026."
 formats:
   - size: "24 x 30"
     price: "160.00 €"

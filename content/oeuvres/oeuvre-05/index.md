@@ -11,7 +11,7 @@ description: |
   Le bokeh irréel et les vibrations chromatiques brouillent la frontière entre matière organique et énergie céleste. Les filaments deviennent des trajectoires lumineuses, évoquant autant une explosion stellaire qu’une persistance rétinienne fragile.
 
   L’œuvre joue sur cette ambiguïté entre infiniment petit et immensité cosmique, proposant une vision onirique où le vivant rejoint l’universel. À travers la lumière et l’abstraction, le réel se métamorphose ici en paysage intérieur.
-informations: "Tirage sur toile monté sur caisse américaine. Année de production : 2026."
+informations: "Tirage sur toile monté sur caisse américaine noire. Tirage limité à 12 exemplaires tous formats et supports confondus. Année de production : 2026."
 formats:
   - size: "30 x 20"
     price: "160.00 €"

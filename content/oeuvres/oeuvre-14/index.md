@@ -11,7 +11,7 @@ description: |
   Les fleurs pastel, les papillons et les perles contrastent avec le vide noir des yeux, transformant le masque en présence ambiguë : à la fois fragile, artificielle et profondément humaine. Le visage semble habité par une mémoire invisible, comme si quelque chose subsistait derrière l’absence apparente.
 
   À travers cette création, l’œuvre interroge la manière dont les masques révèlent autant qu’ils dissimulent. L’identité devient ici une construction sensible, faite de projections, de métamorphoses et de traces émotionnelles.
-informations: "Tirage sur papier fine art Hahnemühle Museum Etching. Cadre aluminium. Année de production : 2026. Exposition Printemps des Arts - thème : « Masques »."
+informations: "Tirage sur papier fine art Hahnemühle Museum Etching. Cadre aluminium. Année de production : 2026. Exposition Printemps des Arts - thème : « Masques ». Tirage limité à 10 exemplaires tous formats et supports confondus."
 formats:
   - size: "40 x 60"
     price: "220.00 €"

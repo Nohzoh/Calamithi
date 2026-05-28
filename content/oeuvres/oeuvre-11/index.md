@@ -11,7 +11,7 @@ description: |
   La spirale centrale agit comme une force d’absorption autour de laquelle les lignes se fragmentent, se dédoublent et se disloquent. Les couleurs incandescentes - or, violet, noir électrique - produisent une tension presque cosmique, évoquant autant une cartographie chaotique qu’un phénomène astral en expansion.
 
   À travers cette œuvre, la photographie cesse d’être une simple captation du monde visible pour devenir une expérience de désorientation perceptive. Le regard est entraîné dans un espace mouvant où les repères disparaissent progressivement au profit d’une immersion sensorielle totale.
-informations: "Tirage sur toile sans encadrement (choix artistique volontaire). Année de production : 2026."
+informations: "Tirage sur toile sans encadrement (choix artistique volontaire). Tirage limité à 12 exemplaires tous formats et supports confondus. Année de production : 2026."
 formats:
   - size: "40 x 50"
     price: "170.00 €"

@@ -5,13 +5,19 @@ thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Fragilités silencieuses"
 location: "Fontenay-sous-Bois"
+
 description: |
   À travers cette macro de pissenlit réalisée dans un environnement intime et quotidien, Ce que le vent emporte révèle la puissance graphique et poétique d’un sujet presque invisible. Isolée sur un fond sombre, la structure végétale devient une architecture fragile faite de lignes, de tensions et de légèreté suspendue.
 
   Le noir et blanc accentue le dépouillement de l’image et éloigne toute lecture naturaliste. Le végétal cesse d’être une simple fleur pour devenir trace, souffle ou mémoire en voie de disparition. Chaque filament semble retenu dans un équilibre précaire, à la frontière entre présence et effacement.
 
   Par son minimalisme assumé, l’œuvre invite à une contemplation silencieuse où la fragilité du vivant rejoint celle des souvenirs et des instants fugitifs.
-informations: "Tirage sur toile monté sur caisse américaine noire. Tirage limité à 12 exemplaires tous formats et supports confondus. Année de production : 2026."
+
+informations: |
+  Toile montée sur caisse américaine noire.
+  Édition limitée à 12 exemplaires, tous formats et supports confondus.
+  Production en 2026.
+
 formats:
   - size: "20 x 30"
     price: "160.00 €"

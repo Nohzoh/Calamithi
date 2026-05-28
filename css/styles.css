@@ -255,6 +255,9 @@ button, .button {
 .work-summary ul li {
   margin: 0.85rem 0;
 }
+.work-description p + p {
+  margin-top: 1rem;
+}
 .format-entry {
   display: flex;
   flex-wrap: wrap;

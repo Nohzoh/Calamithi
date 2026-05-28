@@ -35,8 +35,8 @@
     <h1>{{ .Title }}</h1>
     <p class="eyebrow">{{ .Params.year }} · {{ .Params.location }}</p>
     <div class="work-summary">
-      <div>
-        <p>{{ .Description }}</p>
+      <div class="work-description">
+        {{ .Description | markdownify }}
       </div>
       <div>
         <h2>Informations</h2>
@@ -45,8 +45,6 @@
       {{ $formats := .Params.formats }}
       {{ if not $formats }}
         {{ $formats = slice }}
-        {{ if and .Params.dimspetit .Params.prixpetit }}{{ $formats = $formats | append (dict "size" .Params.dimspetit "price" .Params.prixpetit "stripe_url" .Params.stripepetit) }}{{ end }}
-        {{ if and .Params.dimsgrand .Params.prixgrand }}{{ $formats = $formats | append (dict "size" .Params.dimsgrand "price" .Params.prixgrand "stripe_url" .Params.stripegrand) }}{{ end }}
       {{ end }}
       {{ if gt (len $formats) 0 }}
       <div>

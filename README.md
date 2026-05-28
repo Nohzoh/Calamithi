@@ -41,7 +41,6 @@ order: 3
 
 - Le champ `formats` permet de définir plusieurs tailles/prix.
 - `stripe_url` peut être défini pour chaque format.
-- Le template garde une compatibilité avec les anciens champs `dimspetit`, `dimsgrand`, `prixpetit`, `prixgrand` si nécessaire.
 
 3. Placez les images à côté du fichier :
    - `thumbnail.jpg`

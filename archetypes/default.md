@@ -6,7 +6,7 @@ thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Série"
 location: "Lieu"
-description: ""
+description: |
 intention: ""
 context: ""
 order: 1

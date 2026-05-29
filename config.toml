@@ -21,6 +21,5 @@ canonifyURLs = false
   rights_statement = "Les photographies, textes et contenus de ce site ne peuvent être reproduits, distribués ou utilisés sans autorisation."
   watermark_enabled = false
   ogImage = "images/cover.jpg"
-  googleAnalytics = "G-30BGTTP14G"
 [permalinks]
   oeuvres = "/oeuvres/:slug/"

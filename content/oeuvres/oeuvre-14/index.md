@@ -22,9 +22,14 @@ informations: |
   Présentée à l’exposition Printemps des Arts 2026 · Villa Cathala, Noisy-le-Grand.
 
 formats:
-  - size: "40 x 60"
-    price: "220.00 €"
-    stripe_url: "https://buy.stripe.com/4gMfZj7IZ80Y3rnh2A5Rm0o"
+  - size: "40 x 60 (avec cadre)"
+    price: "330.00 €"
+    stripe_urll: ""
+
+  - size: "40 x 60 (sans cadre)"
+    price: "200.00 €"
+    stripe_urll: ""
+
 order: 14
 ---
 

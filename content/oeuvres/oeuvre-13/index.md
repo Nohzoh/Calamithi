@@ -23,12 +23,12 @@ informations: |
 
 formats:
   - size: "20 x 30"
-    price: "215 €"
-    stripe_url: "https://buy.stripe.com/dRm4gBe7nchebXTh2A5Rm0m"
+    price: "220 €"
+    stripe_urll: ""
 
   - size: "40 x 60"
-    price: "350 €"
-    stripe_url: "https://buy.stripe.com/fZu28t6EV0yw1jfcMk5Rm0n"
+    price: "330 €"
+    stripe_urll: ""
 order: 13
 ---
 

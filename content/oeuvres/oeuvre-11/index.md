@@ -21,7 +21,7 @@ informations: |
 formats:
   - size: "40 x 50"
     price: "180.00 €"
-    stripe_urll: ""
+    stripe_url: "https://buy.stripe.com/28EdRb6EV80Y5zvh2A5Rm0k"
 order: 11
 ---
 

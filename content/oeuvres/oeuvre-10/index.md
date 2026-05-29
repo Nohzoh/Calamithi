@@ -20,7 +20,7 @@ informations: |
 formats:
   - size: "30 x 20"
     price: "220.00 €"
-    stripe_urll: ""
+    stripe_url: "https://buy.stripe.com/9B64gB9R72GE7HDfYw5Rm0i"
 order: 10
 ---
 

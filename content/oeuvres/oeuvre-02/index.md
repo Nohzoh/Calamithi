@@ -21,11 +21,11 @@ informations: |
 formats:
   - size: "20 x 30"
     price: "200.00 €"
-    stripe_urll: ""
+    stripe_url: "https://buy.stripe.com/cNi00laVb3KIbXT5jS5Rm02"
 
   - size: "40 x 60"
     price: "390.00 €"
-    stripe_urll: ""
+    stripe_url: "https://buy.stripe.com/00wfZj5AR4OMbXT8w45Rm03"
 order: 2
 ---
 

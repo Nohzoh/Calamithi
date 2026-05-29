@@ -24,11 +24,11 @@ informations: |
 formats:
   - size: "40 x 60 (avec cadre)"
     price: "330.00 €"
-    stripe_urll: ""
+    stripe_url: "https://buy.stripe.com/4gMfZj7IZ80Y3rnh2A5Rm0o"
 
   - size: "40 x 60 (sans cadre)"
     price: "200.00 €"
-    stripe_urll: ""
+    stripe_url: "https://buy.stripe.com/6oUfZje7n0yw3rnaEc5Rm0r"
 
 order: 14
 ---

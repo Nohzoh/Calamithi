@@ -14,9 +14,9 @@ description: |
   Par cette approche sensorielle du paysage, l’œuvre cherche moins à représenter un lieu qu’à traduire une sensation intérieure : celle d’un monde végétal traversé par la mémoire, la lumière et le mouvement.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "24 x 30"

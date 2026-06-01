@@ -14,9 +14,9 @@ description: |
   Par son équilibre entre architecture, lumière et mouvement vivant, l’œuvre interroge la possibilité d’un horizon poétique au cœur même de l’espace urbain. Les oiseaux deviennent ici les messagers fugitifs d’un monde encore capable d’échapper à la pesanteur du réel.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "20 x 30"

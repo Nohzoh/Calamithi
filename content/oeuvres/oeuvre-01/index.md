@@ -14,9 +14,9 @@ description: |
   L’œuvre interroge ainsi notre manière d’habiter la nuit contemporaine : une nuit où la technologie devient poésie visuelle, où la lumière cesse d’éclairer pour commencer à rêver.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "30 x 20"

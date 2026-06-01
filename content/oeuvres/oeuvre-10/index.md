@@ -13,9 +13,9 @@ description: |
   À travers cette approche macro et abstraite, l’œuvre explore la capacité de la lumière à désorganiser les formes, jusqu’à faire émerger un langage purement chromatique où le regard se perd volontairement entre matière, reflet et illusion.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "30 x 20"

@@ -14,9 +14,9 @@ description: |
   L’œuvre joue sur cette ambiguïté entre infiniment petit et immensité cosmique, proposant une vision onirique où le vivant rejoint l’universel. À travers la lumière et l’abstraction, le réel se métamorphose ici en paysage intérieur.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "30 x 20"

@@ -14,9 +14,9 @@ description: |
   Par son dépouillement formel, l’œuvre joue sur la puissance évocatrice du hors-champ. Ce qui importe ici n’est pas ce qui est montré, mais ce que les formes, la chaleur et la lumière laissent deviner.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "20 x 30"

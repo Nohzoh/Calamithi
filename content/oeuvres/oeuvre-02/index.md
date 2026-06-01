@@ -14,9 +14,9 @@ description: |
   Par son minimalisme assumé, l’œuvre invite à une contemplation silencieuse où la fragilité du vivant rejoint celle des souvenirs et des instants fugitifs.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "20 x 30"

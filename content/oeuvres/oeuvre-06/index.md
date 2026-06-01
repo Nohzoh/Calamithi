@@ -14,9 +14,9 @@ description: |
   À travers cette abstraction du paysage nocturne, l’œuvre explore la manière dont la mémoire visuelle reconstruit les espaces urbains : non comme des formes fixes, mais comme des flux mouvants, traversés de lumières, de vitesses et de rémanences.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "30 x 20"

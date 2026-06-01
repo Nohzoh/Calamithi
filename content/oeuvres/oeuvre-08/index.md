@@ -14,9 +14,9 @@ description: |
   Dans cet univers onirique, la lumière n’éclaire plus le réel : elle le consume, le déforme et le réinvente. L’œuvre propose une expérience sensorielle où la matière semble traversée par une énergie mouvante, à la frontière du rêve et de la disparition.
 
 informations: |
-  Toile montée sur caisse américaine noire.
+  Toile montée en caisse américaine noire.
   Édition limitée à 12 exemplaires, tous formats et supports confondus.
-  Production en 2026.
+  Production 2026.
 
 formats:
   - size: "20 x 30"

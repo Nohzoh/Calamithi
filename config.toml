@@ -1,4 +1,4 @@
-baseURL = "https://nohzoh.github.io/Calamithi/"
+baseURL = "https://calamithi.attitud.photo/"
 locale = "fr-FR"
 title = "Livret d’exposition photographique"
 enableRobotsTXT = true
@@ -21,5 +21,18 @@ canonifyURLs = false
   rights_statement = "Les photographies, textes et contenus de ce site ne peuvent être reproduits, distribués ou utilisés sans autorisation."
   watermark_enabled = false
   ogImage = "images/cover.jpg"
+
+[params.contact]
+  email = "calamithi@gmail.com"
+  google_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdXeLR3-qkA1x7-5GvEHqNXZODOBLY0LQGH5x0riCbavgQHnw/viewform?embedded=true"
+
+[[params.contact.socials]]
+  name = "Instagram"
+  url = "https://www.instagram.com/calamithi94/"
+
+[[params.contact.socials]]
+  name = "Facebook"
+  url = "https://www.facebook.com/AttitudPhoto"
+
 [permalinks]
   oeuvres = "/oeuvres/:slug/"

@@ -15,12 +15,12 @@
   {{ end }}
 {{ end }}
 
-{{ if gt (len $series) 1 }}
+<!-- {{ if gt (len $series) 1 }}
   <div class="gallery-filter" aria-label="Filtrer par série">
     <button data-filter="all" class="filter-button active">Toutes les séries</button>
     {{ range $series }}<button data-filter="{{ . | urlize }}" class="filter-button">{{ . }}</button>{{ end }}
   </div>
-{{ end }}
+{{ end }} -->
 
 <section class="gallery-grid" aria-label="Galerie des œuvres">
   {{ range $oeuvres }}

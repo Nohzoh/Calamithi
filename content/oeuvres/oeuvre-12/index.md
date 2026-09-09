@@ -4,7 +4,7 @@ year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Spirales intérieures"
-location: "Paris - Atelier des Lumières"
+location: "Paris"
 
 description: |
   Issue d’une projection lumineuse immersive photographiée en pose longue à l’Atelier des Lumières, Hypnose végétale explore la frontière mouvante entre captation photographique et réinterprétation numérique. Retravaillée à travers différentes transformations visuelles - déformations, distorsions et recompositions de l’image - l’œuvre s’éloigne volontairement du réel pour entrer dans un espace mental et organique.

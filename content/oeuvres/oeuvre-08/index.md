@@ -4,7 +4,7 @@ year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Matières incandescentes"
-location: "Paris - Parc de la Villette"
+location: "Paris"
 
 description: |
   Réalisée à partir d’installations lumineuses photographiées au Parc de la Villette, Forêt de braise transforme un paysage nocturne en matière vibrante et presque organique. Par le mouvement volontaire de l’appareil photographique (ICM), les structures lumineuses se dissolvent pour devenir une forêt instable de lignes embrasées.

@@ -4,7 +4,7 @@ year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Topographies du chaos"
-location: "Paris - Atelier des Lumières"
+location: "Paris"
 
 description: |
   Réalisée à partir d’une projection lumineuse immersive photographiée en pose longue à l’Atelier des Lumières, Le vertige des soleils pousse la transformation du réel jusqu’à la saturation visuelle. Retravaillée numériquement à travers différentes opérations de déformation et de recomposition, l’image devient un territoire instable où lumière, matière et mouvement semblent entrer en collision.

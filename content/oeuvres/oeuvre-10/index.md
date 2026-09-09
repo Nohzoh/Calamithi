@@ -4,7 +4,7 @@ year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Chromatismes vivants"
-location: "Paris - Grand Palais Immersif, Bastille"
+location: "Paris"
 description: |
   Réalisée à partir d’un presse-papier en cristal coloré photographié en très gros plan, Éclats de fête oubliée transforme un objet décoratif en territoire sensoriel instable. Fragmentée par les reflets, les transparences et les déformations optiques, l’image abandonne toute lecture immédiate du réel pour basculer vers une composition presque picturale.
 

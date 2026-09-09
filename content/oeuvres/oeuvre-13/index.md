@@ -4,7 +4,7 @@ year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Fragments urbains"
-location: "Paris 13e - Place d’Italie"
+location: "Paris"
 
 description: |
   Photographié à travers le reflet inversé d’une silhouette dans une flaque d’eau parisienne, Le passant pressé sous la pluie transforme une scène urbaine ordinaire en image flottante et mélancolique. Le réel apparaît ici renversé, fragmenté par la surface mouvante de l’eau et traversé par une lumière diffuse propre aux journées d’automne pluvieuses.

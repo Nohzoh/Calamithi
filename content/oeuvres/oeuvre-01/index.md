@@ -4,7 +4,7 @@ year: 2025
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Nocturnes électriques"
-location: "Paris - Parc de la Vilette"
+location: "Paris"
 
 description: |
   Au cœur d’un paysage nocturne transformé par des installations lumineuses éphémères, Constellation terrestre brouille volontairement les frontières entre le végétal, le ciel et la matière lumineuse. Les points de lumière, disséminés au pied des arbres comme des fleurs artificielles, composent une cartographie sensible où le regard hésite entre paysage réel et apparition.

@@ -27,6 +27,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* L'attribut hidden doit toujours masquer, même un élément stylé en display: flex (bandeau cookies…). */
+[hidden] {
+  display: none !important;
+}
 img {
   max-width: 100%;
   display: block;

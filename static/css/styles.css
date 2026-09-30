@@ -209,7 +209,6 @@ button, .button {
 .work-hero {
   position: relative;
   margin-bottom: 2rem;
-  border-radius: 36px;
   overflow: hidden;
   background: var(--bg);
   max-height: 90vh;
@@ -220,6 +219,88 @@ button, .button {
   max-height: 90vh;
   display: block;
   object-fit: contain;
+}
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.work-carousel {
+  max-height: none;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 80vh;
+  object-fit: contain;
+}
+.carousel-slide figcaption {
+  padding: 0.75rem 1rem 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+.carousel-btn {
+  position: absolute;
+  top: 40vh;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.carousel-btn:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.carousel-prev { left: 1rem; }
+.carousel-next { right: 1rem; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0 0.25rem;
+}
+.carousel-dots button {
+  width: 0.6rem;
+  height: 0.6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.35;
+  cursor: pointer;
+}
+.carousel-dots button[aria-current="true"] {
+  opacity: 1;
+  background: var(--accent);
+}
+@media (max-width: 720px) {
+  .carousel-slide img { height: auto; max-height: 80vh; }
+  .carousel-btn { display: none; }
 }
 .image-credit {
   margin: 0.75rem 0 0;

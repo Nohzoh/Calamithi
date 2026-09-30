@@ -2,7 +2,11 @@
 title: "Le passant pressé sous la pluie"
 year: 2025
 thumbnail: "thumbnail.jpg"
-hero: "photo.jpg"
+carousel:
+  - "Photographie originale"
+  - "Accrochage à l’exposition Entrez c’est ouvert, Halle Roublot"
+  - "Tirage sur toile, caisse américaine noire"
+  - "Détail de la toile"
 series: "Fragments urbains"
 location: "Paris"
 

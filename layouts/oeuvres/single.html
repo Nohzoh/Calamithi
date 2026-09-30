@@ -21,10 +21,39 @@
 {{ end }}
 
 <article class="work-detail">
-  <div class="work-hero">
-    {{ with .Resources.GetMatch .Params.hero }}
-      {{ $hero := .Resize "1600x" }}
-      <img src="{{ $hero.RelPermalink | absURL }}" alt="{{ $.Title }}" loading="eager">
+  {{/* Carrousel : activé automatiquement dès qu'il existe des images carrousel-N.* (ou carousel-N.*) dans le dossier de l'œuvre, triées par N.
+       Légendes facultatives : liste `carousel` dans le front matter, dans le même ordre. */}}
+  {{ $slides := slice }}
+  {{ range .Resources.Match "{carrousel,carousel}-*" }}
+    {{ $slides = $slides | append (dict "n" (replaceRE `^.*-(\d+)\.[^.]+$` "$1" .Name | int) "img" .) }}
+  {{ end }}
+  {{ $slides = sort $slides "n" }}
+  <div class="work-hero{{ if gt (len $slides) 1 }} work-carousel{{ end }}"{{ if gt (len $slides) 1 }} data-carousel aria-roledescription="carrousel" aria-label="{{ .Title }}"{{ end }}>
+    {{ if gt (len $slides) 1 }}
+      <div class="carousel-track" tabindex="0">
+        {{ range $i, $s := $slides }}
+          {{ $img := $s.img.Resize "1600x" }}
+          {{ $caption := index ($.Params.carousel | default slice) $i }}
+          <figure class="carousel-slide" aria-roledescription="diapositive" aria-label="{{ add $i 1 }} / {{ len $slides }}">
+            <img src="{{ $img.RelPermalink | absURL }}" alt="{{ $.Title }}{{ with $caption }} – {{ . }}{{ else }} – vue {{ add $i 1 }}{{ end }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+            {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+          </figure>
+        {{ end }}
+      </div>
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Image précédente">‹</button>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Image suivante">›</button>
+      <div class="carousel-dots">
+        {{ range $i, $s := $slides }}
+          <button type="button" aria-label="Aller à l’image {{ add $i 1 }}"{{ if eq $i 0 }} aria-current="true"{{ end }}></button>
+        {{ end }}
+      </div>
+    {{ else }}
+      {{ $heroRes := .Resources.GetMatch .Params.hero }}
+      {{ with $slides }}{{ $heroRes = (index . 0).img }}{{ end }}
+      {{ with $heroRes }}
+        {{ $hero := .Resize "1600x" }}
+        <img src="{{ $hero.RelPermalink | absURL }}" alt="{{ $.Title }}" loading="eager">
+      {{ end }}
     {{ end }}
     {{ if and .Site.Params.watermark_enabled .Params.photographer }}<div class="image-watermark">Photo : {{ .Params.photographer }}</div>{{ end }}
   </div>

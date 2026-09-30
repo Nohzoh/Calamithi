@@ -32,6 +32,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = track.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dots button');
+    const prev = carousel.querySelector('.carousel-prev');
+    const next = carousel.querySelector('.carousel-next');
+    let current = 0;
+
+    const goTo = (i) => {
+      const target = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: target * track.clientWidth });
+    };
+    const update = () => {
+      current = Math.round(track.scrollLeft / track.clientWidth);
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current ? 'true' : 'false'));
+      prev.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+    };
+
+    prev.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    track.addEventListener('scroll', () => window.requestAnimationFrame(update), { passive: true });
+    // Les flèches du clavier naviguent dans le carrousel quand il a le focus, sinon entre les œuvres.
+    track.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        event.stopPropagation();
+        goTo(current + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+    });
+    update();
+  });
+
   // Ces mesures sont uniquement dissuasives et ne constituent pas une protection technique réelle.
   document.querySelectorAll('img').forEach((img) => {
     img.addEventListener('contextmenu', function (event) {

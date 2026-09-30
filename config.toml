@@ -36,3 +36,7 @@ canonifyURLs = false
 
 [permalinks]
   oeuvres = "/oeuvres/:slug/"
+
+# Autorise le HTML dans les fichiers Markdown (ex. <br> dans les tableaux).
+[markup.goldmark.renderer]
+  unsafe = true

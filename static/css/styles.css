@@ -418,6 +418,10 @@ button, .button {
 .text-link {
   color: var(--muted);
 }
+.inline-link {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 .content-page {
   padding: 2rem 0 4rem;
 }
@@ -432,6 +436,62 @@ button, .button {
   padding: 2rem 2rem 4rem;
   color: var(--muted);
   font-size: 0.95rem;
+}
+/* Page Caisse américaine */
+.caisse-page { width: min(1200px, 100% - 2rem); margin: 0 auto; padding: 2rem 0 5rem; }
+.caisse-page h1 { margin: 0 0 1.25rem; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; letter-spacing: -0.04em; }
+.caisse-page h2 { margin: 0 0 1rem; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.1; letter-spacing: -0.03em; }
+.caisse-page p { color: var(--muted); font-size: 1.03rem; margin: 0 0 1rem; max-width: 62ch; }
+.caisse-page .lede { font-size: 1.18rem; color: var(--text); }
+.caisse-page figure { margin: 0; }
+.caisse-page figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.6rem; }
+.caisse-page img { width: 100%; height: auto; }
+.caisse-crop { position: relative; overflow: hidden; background: #ddd; }
+.caisse-page .caisse-crop img { position: absolute; max-width: none; max-height: none; height: auto; object-fit: initial; aspect-ratio: auto; }
+.caisse-cta { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
+.caisse-cta p { margin: 0; }
+.caisse-faq a { text-decoration: underline; text-underline-offset: 0.15em; }
+.caisse-wall { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem; }
+.caisse-photo { max-width: 560px; justify-self: center; }
+.caisse-img { position: relative; }
+.caisse-spot { position: absolute; border-radius: 3px; outline: 2px solid transparent; transition: outline-color 160ms, background 160ms; }
+.caisse-tip { position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%); white-space: nowrap; background: var(--text); color: #fff; font-size: 0.8rem; line-height: 1.35; text-align: center; padding: 0.35rem 0.75rem; border-radius: 10px; opacity: 0; transition: opacity 160ms; pointer-events: none; z-index: 1; }
+.caisse-tip small { display: block; opacity: 0.75; font-size: 0.75rem; }
+.caisse-spot:hover, .caisse-spot:focus-visible { outline-color: #fff; background: rgba(255,255,255,0.08); }
+.caisse-spot:hover .caisse-tip, .caisse-spot:focus-visible .caisse-tip { opacity: 1; }
+.caisse-pin { position: absolute; left: 0; top: 0; transform: translate(-40%, -40%); width: 1.5rem; height: 1.5rem; border-radius: 50%; background: #fff; color: var(--text); font-size: 0.75rem; font-weight: 700; display: grid; place-items: center; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+.caisse-legend { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.35rem; }
+.caisse-legend a { display: flex; align-items: baseline; gap: 0.6rem; }
+.caisse-legend b { flex: none; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--text); color: #fff; font-size: 0.75rem; display: grid; place-items: center; transform: translateY(0.2rem); }
+.caisse-legend .caisse-size { color: var(--muted); white-space: nowrap; }
+.caisse-legend a:hover strong { text-decoration: underline; }
+.caisse-facts { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: 0.5rem; }
+.caisse-facts li { position: relative; padding-left: 1.4rem; color: var(--text); }
+.caisse-facts li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 0.5rem; height: 0.5rem; border: 2px solid var(--text); }
+.caisse-details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 1.5rem 0 5rem; }
+.caisse-details img, .caisse-details .caisse-crop { aspect-ratio: 2 / 3; object-fit: cover; }
+.caisse-page .caisse-details .caisse-crop img { width: 228.57%; left: -128.57%; top: -14.29%; }
+.caisse-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0 5rem; }
+.caisse-card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 2rem; }
+.caisse-card svg { width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto 1.5rem; }
+.caisse-card h3 { margin: 0 0 0.75rem; font-size: 1.2rem; }
+.caisse-card ul { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+.caisse-card li { margin-bottom: 0.4rem; }
+.caisse-card.is-caisse { border-color: var(--text); }
+.caisse-faq { max-width: 760px; }
+.caisse-faq details { border-top: 1px solid var(--border); padding: 1.1rem 0; }
+.caisse-faq details:last-child { border-bottom: 1px solid var(--border); }
+.caisse-faq summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.caisse-faq summary::-webkit-details-marker { display: none; }
+.caisse-faq summary::after { content: "+"; color: var(--muted); }
+.caisse-faq details[open] summary::after { content: "–"; }
+.caisse-faq details p { margin: 0.75rem 0 0; }
+@media (max-width: 800px) {
+  .caisse-wall, .caisse-compare { grid-template-columns: 1fr; gap: 1.5rem; }
+  .caisse-wall { margin-bottom: 3.5rem; }
+  .caisse-card { padding: 1.5rem; }
+  .caisse-details { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .caisse-details figure:first-child { grid-column: 1 / -1; }
 }
 @media (max-width: 900px) {
   .hero-landing {

@@ -69,7 +69,9 @@
       </div>
       <div>
         <h2>Informations</h2>
-        <p>{{ .Params.informations }}</p>
+        {{/* Chaque mention « caisse américaine » renvoie vers la page qui la présente. */}}
+        {{ $caisseLink := printf `<a class="inline-link" href="%s">$1</a>` ("caisse-americaine/" | absURL) }}
+        <p>{{ replaceRE `(?i)(caisse américaine)` $caisseLink (.Params.informations | htmlEscape) | safeHTML }}</p>
       </div>
       {{ $formats := .Params.formats }}
       {{ if not $formats }}

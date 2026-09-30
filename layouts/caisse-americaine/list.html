@@ -1,0 +1,118 @@
+{{ define "main" }}
+{{ $o13 := site.GetPage "/oeuvres/oeuvre-13" }}
+{{ $matiere := ($o13.Resources.GetMatch "carrousel-4.jpg").Fill "800x1200 Center" }}
+{{ $mur := ((.Resources.Get "accrochage-studio.jpg").Resize "1600x").RelPermalink | absURL }}
+{{ $angle := ((.Resources.Get "angle-trois-quarts.jpg").Resize "1000x").RelPermalink | absURL }}
+{{/* Œuvres visibles sur accrochage-studio.jpg : format accroché, puis position en % de l'image (gauche, haut, largeur, hauteur) */}}
+{{ $spots := slice
+  (dict "page" "/oeuvres/oeuvre-09" "size" "32 x 40 cm" "x" 3.9 "y" 18.6 "w" 37.3 "h" 30.4)
+  (dict "page" "/oeuvres/oeuvre-13" "size" "40 x 60 cm" "x" 50.6 "y" 7.9 "w" 44.9 "h" 44)
+  (dict "page" "/oeuvres/oeuvre-10" "size" "30 x 20 cm" "x" 4.7 "y" 61 "w" 35.6 "h" 16.4)
+  (dict "page" "/oeuvres/oeuvre-03" "size" "30 x 45 cm" "x" 56.9 "y" 58.6 "w" 34.9 "h" 33.5)
+}}
+
+<article class="caisse-page">
+  <section class="caisse-wall">
+    <div>
+      <p class="eyebrow">{{ .Title }}</p>
+      <h1>Des toiles faites pour le mur</h1>
+      <p class="lede">Chaque toile est montée dans une caisse américaine noire : un cadre en bois, sans vitre, dont la toile ne touche pas les bords.</p>
+      <p>Un interstice de 8 mm sépare la toile du cadre. Il dessine une ligne d’ombre qui détache l’œuvre du mur et lui donne l’air de flotter. Rien ne recouvre la photographie, aucun reflet ne la trouble.</p>
+      <ul class="caisse-facts">
+        <li>Toile tendue sur châssis bois</li>
+        <li>Caisse en bois noir, 4 cm de profondeur</li>
+        <li>Moins de 2 kg, même pour les grands formats</li>
+        <li>Livrée montée, prête à accrocher</li>
+      </ul>
+    </div>
+    <figure class="caisse-photo">
+      <div class="caisse-img">
+        <img src="{{ $mur }}" alt="Quatre œuvres en caisse américaine noire accrochées sur un mur blanc">
+        {{ range $i, $s := $spots }}{{ with site.GetPage $s.page }}
+          <a class="caisse-spot" href="{{ .RelPermalink }}" style="left:{{ $s.x }}%;top:{{ $s.y }}%;width:{{ $s.w }}%;height:{{ $s.h }}%" aria-label="{{ .Title }}, {{ $s.size }}"><span class="caisse-pin" aria-hidden="true">{{ add $i 1 }}</span><span class="caisse-tip">{{ .Title }}<small>{{ $s.size }}</small></span></a>
+        {{ end }}{{ end }}
+      </div>
+      <figcaption>Dans le studio photo de l’artiste, lors de l’événement Entrez c’est ouvert 2026.</figcaption>
+      <ol class="caisse-legend">
+        {{ range $i, $s := $spots }}{{ with site.GetPage $s.page }}
+          <li><a href="{{ .RelPermalink }}"><b>{{ add $i 1 }}</b><span><strong>{{ .Title }}</strong> <span class="caisse-size">{{ $s.size }}</span></span></a></li>
+        {{ end }}{{ end }}
+      </ol>
+    </figure>
+  </section>
+
+  <h2>De plus près</h2>
+  <div class="caisse-details">
+    <figure><img src="{{ $angle }}" alt="Angle d’une caisse américaine noire vu de trois quarts, montrant la profondeur du cadre"><figcaption>4 cm de profondeur : l’œuvre prend du relief.</figcaption></figure>
+    <figure><div class="caisse-crop"><img src="{{ $mur }}" alt="Angle du cadre accroché, l’interstice visible entre l’œuvre et le profilé"></div><figcaption>8 mm d’interstice : l’œuvre ne touche pas le cadre.</figcaption></figure>
+    <figure><img src="{{ $matiere.RelPermalink | absURL }}" alt="Gros plan sur le grain de la toile"><figcaption>Sans vitre, le grain de la toile reste visible.</figcaption></figure>
+  </div>
+
+  <h2>Cadre classique ou caisse américaine ?</h2>
+  <div class="caisse-compare">
+    <div class="caisse-card">
+      <svg viewBox="0 0 240 170" role="img" aria-label="Schéma d’un cadre classique avec vitre">
+        <defs><linearGradient id="caisse-img" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1f3b5c"/><stop offset="1" stop-color="#c98a3a"/></linearGradient></defs>
+        <rect x="14" y="14" width="212" height="142" fill="url(#caisse-img)"/>
+        <path fill-rule="evenodd" d="M0 0 H240 V170 H0 Z M24 24 V146 H216 V24 Z" fill="#6f6557"/>
+        <rect x="14" y="14" width="212" height="142" fill="none" stroke="#d2412f" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <polygon points="84,24 134,24 74,146 24,146" fill="#fff" opacity="0.28"/>
+        <polygon points="154,24 174,24 114,146 94,146" fill="#fff" opacity="0.18"/>
+      </svg>
+      <h3>Cadre classique</h3>
+      <ul>
+        <li>La feuillure recouvre les bords de l’image <span style="color:#d2412f">(pointillés)</span>.</li>
+        <li>La vitre renvoie les reflets de la pièce.</li>
+        <li>L’image est plaquée, sans profondeur.</li>
+      </ul>
+    </div>
+    <div class="caisse-card is-caisse">
+      <svg viewBox="0 0 240 170" role="img" aria-label="Schéma d’une caisse américaine">
+        <rect x="0" y="0" width="240" height="170" fill="#1e1a16"/>
+        <rect x="6" y="6" width="228" height="158" fill="#2b2622"/>
+        <rect x="10" y="10" width="220" height="150" fill="#050404"/>
+        <rect x="16" y="16" width="208" height="138" fill="url(#caisse-img)"/>
+      </svg>
+      <h3>Caisse américaine</h3>
+      <ul>
+        <li>L’image est visible en entier, jusqu’au bord.</li>
+        <li>Pas de vitre : aucun reflet, la matière est visible.</li>
+        <li>L’interstice crée une ligne d’ombre : l’œuvre flotte.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Questions fréquentes</h2>
+  <div class="caisse-faq">
+    <details>
+      <summary>Qu’est-ce qu’une caisse américaine ?</summary>
+      <p>Un encadrement utilisé par les galeries pour les œuvres sur toile. La toile, tendue sur son châssis, est fixée au fond du cadre en laissant un espace libre tout autour. On parle aussi de <em>floater frame</em>.</p>
+    </details>
+    <details>
+      <summary>Pourquoi pas de vitre ?</summary>
+      <p>Une toile n’en a pas besoin, et la vitre ajouterait des reflets. Sans elle, on voit l’image telle qu’elle est, avec la matière de la toile.</p>
+    </details>
+    <details>
+      <summary>Les dimensions indiquées incluent-elles le cadre ?</summary>
+      <p>Non : les formats indiqués sur chaque œuvre sont ceux de l’image. Le cadre ajoute 18 mm de chaque côté, soit 3,6 cm en largeur et en hauteur. Une toile de 40 x 60 cm mesure ainsi 43,6 x 63,6 cm une fois encadrée, pour 4 cm de profondeur.</p>
+    </details>
+    <details>
+      <summary>Comment l’accrocher ?</summary>
+      <p>L’œuvre est livrée montée, avec son système d’accroche fixé au dos. Même les grands formats pèsent moins de 2 kg : une vis ou un crochet adapté à votre mur suffit.</p>
+    </details>
+    <details>
+      <summary>Existe-t-il une autre couleur de cadre ?</summary>
+      <p>Oui : la caisse américaine existe aussi en blanc, au même prix. Le noir prolonge les ombres des images ; le blanc les allège et se fond dans un mur clair. Pour commander une œuvre en caisse blanche, écrivez-moi à <a href="mailto:{{ site.Params.contact_email }}">{{ site.Params.contact_email }}</a>.</p>
+    </details>
+    <details>
+      <summary>Comment l’entretenir ?</summary>
+      <p>Un chiffon doux et sec suffit pour dépoussiérer. Évitez l’exposition directe au soleil et les pièces très humides.</p>
+    </details>
+  </div>
+
+  <div class="caisse-cta">
+    <p>La plupart des toiles de l’exposition sont montées en caisse américaine noire.</p>
+    <a class="button-primary" href="{{ "exposition/" | absURL }}">Voir les œuvres</a>
+  </div>
+</article>
+{{ end }}

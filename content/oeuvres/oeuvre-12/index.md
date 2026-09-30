@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Spirales intérieures"
 location: "Paris"
 
+resume: "Une spirale vivante qui aspire le regard. Plongez dans un jardin de lumière hypnotique."
 description: |
   Issue d’une projection lumineuse immersive photographiée en pose longue à l’Atelier des Lumières, Hypnose végétale explore la frontière mouvante entre captation photographique et réinterprétation numérique. Retravaillée à travers différentes transformations visuelles - déformations, distorsions et recompositions de l’image - l’œuvre s’éloigne volontairement du réel pour entrer dans un espace mental et organique.
 

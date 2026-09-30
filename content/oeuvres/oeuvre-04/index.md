@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Mémoire des passages"
 location: "Vincennes"
 
+resume: "Derrière les volets clos, une sieste d’été, des secrets murmurés. Une ombre complice qui habille vos murs de mystère."
 description: |
   Saisie en pleine après-midi dans une rue silencieuse de Vincennes, Les ombres savent transforme une façade ordinaire en espace de projection mentale. Les volets fermés, écrasés par une lumière dense et verticale, deviennent moins un élément architectural qu’un seuil opaque entre le visible et l’imaginaire.
 

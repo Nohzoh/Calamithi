@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Pulsations urbaines"
 location: "Göteborg"
 
+resume: "La ville la nuit devient musique : des lignes de lumière qui vibrent comme une mélodie urbaine."
 description: |
   Réalisée de nuit depuis un bateau-appartement amarré à Göteborg, Lignes de nuit transforme le paysage urbain du pont d’Hisingsbron en une composition lumineuse presque musicale. Par le mouvement volontaire de l’appareil photographique (ICM), les structures architecturales et les éclairages de la ville se dissolvent en une succession de lignes vibrantes, verticales et instables.
 

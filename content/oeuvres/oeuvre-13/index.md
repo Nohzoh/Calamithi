@@ -10,6 +10,7 @@ carousel:
 series: "Fragments urbains"
 location: "Paris"
 
+resume: "Paris sous la pluie, reflété dans une flaque : la mélancolie douce d’un soir d’automne, où la ville devient poème."
 description: |
   Photographié à travers le reflet inversé d’une silhouette dans une flaque d’eau parisienne, Le passant pressé sous la pluie transforme une scène urbaine ordinaire en image flottante et mélancolique. Le réel apparaît ici renversé, fragmenté par la surface mouvante de l’eau et traversé par une lumière diffuse propre aux journées d’automne pluvieuses.
 

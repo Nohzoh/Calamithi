@@ -5,6 +5,7 @@ thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Présences imaginaires"
 location: "Fontenay-sous-Bois"
+resume: "Un visage fleuri, orné de papillons et de perles. Une présence mystérieuse qui vous regarde en silence."
 description: |
   Créé spécialement pour une exposition autour du thème du masque, Masque de présence absente met en scène un visage silencieux, à la frontière entre apparition poétique et identité effacée. Réalisée à partir d’un masque blanc en papier épais entièrement customisé puis photographié dans une lumière froide et diffuse, l’œuvre compose un univers délicat où le végétal, l’ornement et le symbole se mêlent à une profonde sensation d’étrangeté.
 

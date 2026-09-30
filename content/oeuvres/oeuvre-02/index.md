@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Fragilités silencieuses"
 location: "Fontenay-sous-Bois"
 
+resume: "Un souffle suspendu, une promesse prête à s’envoler. La poésie d’un instant fragile, à garder près de soi."
 description: |
   À travers cette macro de pissenlit réalisée dans un environnement intime et quotidien, Ce que le vent emporte révèle la puissance graphique et poétique d’un sujet presque invisible. Isolée sur un fond sombre, la structure végétale devient une architecture fragile faite de lignes, de tensions et de légèreté suspendue.
 

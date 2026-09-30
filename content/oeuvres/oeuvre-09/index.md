@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Rémanences liquides"
 location: "Copenhague"
 
+resume: "Un voilier qui ondule comme un mirage. Laissez-vous porter vers un rivage imaginaire."
 description: |
   Photographié à travers le reflet mouvant d’un voilier amarré, Le bateau des mirages transforme une scène portuaire ordinaire en apparition instable. Les ondulations de l’eau fragmentent les lignes du bateau jusqu’à faire vaciller sa structure même, comme si l’image hésitait entre présence réelle et dissolution.
 

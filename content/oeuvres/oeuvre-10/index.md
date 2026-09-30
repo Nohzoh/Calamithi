@@ -5,6 +5,7 @@ thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 series: "Chromatismes vivants"
 location: "Paris"
+resume: "Les couleurs d’une fête inoubliable, figées dans un éclat de cristal. La joie, en pleine lumière."
 description: |
   Réalisée à partir d’un presse-papier en cristal coloré photographié en très gros plan, Éclats de fête oubliée transforme un objet décoratif en territoire sensoriel instable. Fragmentée par les reflets, les transparences et les déformations optiques, l’image abandonne toute lecture immédiate du réel pour basculer vers une composition presque picturale.
 

@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Matières incandescentes"
 location: "Paris"
 
+resume: "Un feu qui danse au cœur de l’automne. Des braises de lumière pour réchauffer votre regard."
 description: |
   Réalisée à partir d’installations lumineuses photographiées au Parc de la Villette, Forêt de braise transforme un paysage nocturne en matière vibrante et presque organique. Par le mouvement volontaire de l’appareil photographique (ICM), les structures lumineuses se dissolvent pour devenir une forêt instable de lignes embrasées.
 

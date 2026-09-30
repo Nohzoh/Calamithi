@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Reflets du vivant"
 location: "Yerres"
 
+resume: "Une forêt qui flotte entre veille et songe. Une fenêtre verte et apaisante, ouverte sur le rêve."
 description: |
   À travers le mouvement volontaire de l’appareil photographique (ICM) et le jeu des reflets sur l’eau, Les arbres qui rêvent transforme un paysage végétal en une vision flottante et presque picturale. Les troncs se dissolvent dans une matière lumineuse mouvante où le regard hésite entre photographie, peinture impressionniste et souvenir fragmentaire.
 

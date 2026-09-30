@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Horizons fragiles"
 location: "Rouen"
 
+resume: "Au bout de la ruelle, le ciel s’embrase et les oiseaux s’envolent. Une invitation au départ, chaque jour."
 description: |
   Photographiée depuis la terrasse d’un bar au cœur de Rouen, Les oiseaux quittent la ville capte un instant suspendu entre immobilité urbaine et mouvement soudain. Les façades à colombages, plongées dans un semi contre-jour de fin de journée hivernale, dessinent un corridor sombre au sein duquel surgit une envolée inattendue d’oiseaux.
 

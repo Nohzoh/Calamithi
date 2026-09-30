@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Nocturnes électriques"
 location: "Paris"
 
+resume: "Une nuit où les étoiles sont descendues fleurir au pied des arbres. Offrez-vous un ciel à portée de main."
 description: |
   Au cœur d’un paysage nocturne transformé par des installations lumineuses éphémères, Constellation terrestre brouille volontairement les frontières entre le végétal, le ciel et la matière lumineuse. Les points de lumière, disséminés au pied des arbres comme des fleurs artificielles, composent une cartographie sensible où le regard hésite entre paysage réel et apparition.
 

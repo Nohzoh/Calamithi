@@ -1,9 +1,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+{{/* Titre court (≈ 60 caractères max) : le nom du site complet ne figure que sur l'accueil. */}}
+{{ $title := .Site.Title }}{{ if not .IsHome }}{{ $title = printf "%s · %s" .Title .Site.Params.author }}{{ end }}
+{{/* Description courte (≈ 155 caractères max, limite d'affichage de Google et des réseaux sociaux).
+     Un champ « resume » dans le front matter permet de l'écrire soi-même. */}}
 {{ $description := .Site.Params.description }}
-{{ with .Description }}{{ $description = . | plainify | replaceRE `\s+` " " | truncate 200 }}{{ end }}
+{{ with .Description }}{{ $description = . | plainify | replaceRE `\s+` " " | truncate 150 }}{{ end }}
+{{ with .Params.resume }}{{ $description = . | plainify | replaceRE `\s+` " " | strings.TrimSpace }}{{ end }}
 {{ $shareImage := partial "share-image.html" . }}
+<title>{{ $title }}</title>
 <meta name="description" content="{{ $description }}">
 <meta name="copyright" content="{{ .Site.Params.copyright_owner }} © {{ .Site.Params.copyright_year }}">
 <meta name="author" content="{{ .Site.Params.author }}">
@@ -12,7 +17,7 @@
 {{/* Le nom du fichier change à chaque modification : les navigateurs ne gardent jamais une ancienne version en cache. */}}
 {{ with resources.Get "css/styles.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}">
+<meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
@@ -20,10 +25,10 @@
 <meta property="og:image" content="{{ .Permalink }}">
 <meta property="og:image:width" content="{{ .Width }}">
 <meta property="og:image:height" content="{{ .Height }}">
-<meta property="og:image:alt" content="{{ $.Title }}">
+<meta property="og:image:alt" content="{{ if and $.IsPage (eq $.Section "oeuvres") }}Photographie « {{ $.Title }} » de {{ site.Params.author }}{{ else }}{{ $title }}{{ end }}">
 {{ else }}{{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}{{ end }}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 {{ with $shareImage }}<meta name="twitter:image" content="{{ .Permalink }}">{{ else }}{{ with .Site.Params.ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}{{ end }}
 <meta name="theme-color" content="{{ .Site.Params.themeColor }}">
@@ -33,5 +38,5 @@
 <link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
 <link rel="manifest" href="{{ "site.webmanifest" | absURL }}">
-{{ if and .IsPage (eq .Section "oeuvres") }}{{ partial "oeuvre-jsonld.html" (dict "page" . "description" $description "image" $shareImage) }}{{ end }}
+{{ if and .IsPage (eq .Section "oeuvres") }}{{ partial "oeuvre-jsonld.html" (dict "page" . "description" $description "image" (partial "oeuvre-image.html" .)) }}{{ end }}
 {{ partial "google-analytics.html" . }}

@@ -6,6 +6,7 @@ hero: "photo.jpg"
 series: "Persistance lumineuse"
 location: "Fontenay-sous-Bois"
 
+resume: "Au cœur de la nuit, une étoile s’allume. Un éclat de cosmos pour illuminer votre intérieur."
 description: |
   À travers cette exploration macro d’une étamine de pissenlit, Naissance d’une étoile transforme un fragment végétal presque imperceptible en phénomène cosmique. Isolée dans l’obscurité, la structure rayonnante semble émerger du noir comme une apparition lumineuse suspendue dans l’espace.
 

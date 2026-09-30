@@ -5,6 +5,8 @@ thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
 location: "Lieu"
 
+# Accroche courte (125 caractères max) pour Google et les réseaux sociaux.
+resume: ""
 description: |
   Texte de présentation de l’œuvre.
 

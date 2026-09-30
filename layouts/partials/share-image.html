@@ -1,9 +1,51 @@
-{{/* Image de partage (réseaux sociaux) : photo de l'œuvre, ou image indiquée par « image » dans le front matter. */}}
+{{/* Image de partage (réseaux sociaux), au format 1200×630 attendu par Facebook, LinkedIn, X…
+     Œuvre : vignette composée — photo entière à gauche sur fond crème, titre et infos à droite.
+     Autres pages : image indiquée par « image » dans le front matter, recadrée en 1200×630. */}}
 {{ $img := "" }}
 {{ if and .IsPage (eq .Section "oeuvres") }}
-  {{ $img = partial "oeuvre-image.html" . }}
+  {{ with partial "oeuvre-image.html" . }}
+    {{ $bg := "#f7f3ee" }}
+    {{ $ink := "#1e1a16" }}
+    {{ $muted := "#6b625a" }}
+    {{ $margin := 40 }}
+    {{/* Photo entière, jamais recadrée : elle tient dans une zone de 520×550 à gauche. */}}
+    {{ $photo := .Fit "520x550 q85" }}
+    {{ $top := div (sub 630 $photo.Height) 2 }}
+    {{ $right := sub (sub 1200 $margin) $photo.Width }}
+    {{ $textX := add (add $margin $photo.Width) 56 }}
+
+    {{/* Prix le plus bas, affiché à la française. */}}
+    {{ $minPrice := "" }}{{ $minValue := 0 }}{{ $count := 0 }}
+    {{ range $.Params.formats }}
+      {{ $p := replaceRE `[.,]00\b` "" .price }}
+      {{ $v := replaceRE `[^0-9]` "" $p | int }}
+      {{ $count = add $count 1 }}
+      {{ if or (eq $minPrice "") (lt $v $minValue) }}{{ $minPrice = $p }}{{ $minValue = $v }}{{ end }}
+    {{ end }}
+
+    {{ $bold := resources.Get "fonts/inter-600.ttf" }}
+    {{ $regular := resources.Get "fonts/inter-400.ttf" }}
+    {{ $meta := slice }}{{ with $.Params.year }}{{ $meta = $meta | append (string .) }}{{ end }}{{ with $.Params.location }}{{ $meta = $meta | append . }}{{ end }}
+    {{ $meta = delimit $meta " · " }}
+    {{ $edition := "" }}{{ with $.Params.edition }}{{ $edition = printf "Tirage limité à %v exemplaires" . }}{{ end }}
+    {{ $price := "" }}{{ with $minPrice }}{{ $price = printf "%s%s" (cond (gt $count 1) "À partir de " "") . }}{{ end }}
+
+    {{ $filters := slice
+      (images.Padding $top $right (sub (sub 630 $top) $photo.Height) $margin $bg)
+      (images.Text site.Params.author (dict "font" $regular "size" 22 "color" $muted "x" $textX "y" 150))
+      (images.Text $.Title (dict "font" $bold "size" 48 "color" $ink "x" $textX "y" 190 "linespacing" 10))
+    }}
+    {{ $y := 370 }}
+    {{ range slice $meta $edition $price }}
+      {{ with . }}
+        {{ $filters = $filters | append (images.Text . (dict "font" $regular "size" 26 "color" $ink "x" $textX "y" $y)) }}
+        {{ $y = add $y 42 }}
+      {{ end }}
+    {{ end }}
+    {{ $filters = $filters | append (images.Text (replaceRE `^https?://|/$` "" site.BaseURL) (dict "font" $regular "size" 22 "color" $muted "x" $textX "y" 540)) }}
+    {{ $img = $photo | images.Filter $filters }}
+  {{ end }}
 {{ else }}
-  {{ with .Params.image }}{{ $img = $.Resources.GetMatch . }}{{ end }}
+  {{ with .Params.image }}{{ with $.Resources.GetMatch . }}{{ $img = .Fill "1200x630 Center q85" }}{{ end }}{{ end }}
 {{ end }}
-{{ with $img }}{{ $img = .Resize "1200x" }}{{ end }}
 {{ return $img }}

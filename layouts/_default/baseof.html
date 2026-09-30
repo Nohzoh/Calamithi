@@ -9,9 +9,10 @@
           <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         </div>
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="{{ .Site.BaseURL }}">Accueil</a>
-          <a href="{{ "exposition/" | absURL }}">Exposition</a>
-          <a href="{{ "propos/" | absURL }}">À propos</a>
+          {{/* Rubrique courante mise en évidence ; les pages d'œuvres relèvent de l'exposition. */}}
+          {{ $inExpo := or (eq .Section "exposition") (eq .Section "oeuvres") }}
+          <a href="{{ "exposition/" | absURL }}"{{ if $inExpo }} aria-current="{{ if eq .Section "exposition" }}page{{ else }}true{{ end }}"{{ end }}>Exposition</a>
+          <a href="{{ "propos/" | absURL }}"{{ if eq .Section "propos" }} aria-current="page"{{ end }}>À propos</a>
         </nav>
       </header>
 

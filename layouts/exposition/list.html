@@ -26,7 +26,7 @@
   {{ range $oeuvres }}
     {{ $thumb := .Resources.GetMatch .Params.thumbnail }}
     {{ with $thumb }}{{ $thumb = .Fill "720x720 center" }}{{ end }}
-    <article class="gallery-card" data-series="{{ .Params.series | urlize }}">
+    <article class="gallery-card" id="{{ .Title | anchorize }}" data-series="{{ .Params.series | urlize }}">
       <a class="gallery-link" href="{{ .Permalink }}">
         <div class="gallery-figure">
           {{ if $thumb }}<img src="{{ $thumb.RelPermalink | absURL }}" alt="{{ .Title }}" loading="lazy">{{ end }}

@@ -60,6 +60,24 @@ button, .button {
 .site-nav a {
   color: var(--muted);
 }
+.site-nav a[aria-current] {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--text);
+}
+.gallery-card {
+  scroll-margin-top: 1.5rem;
+}
 .skip-link {
   position: absolute;
   left: -999px;

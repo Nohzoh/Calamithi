@@ -21,6 +21,8 @@
 {{ end }}
 
 <article class="work-detail">
+  {{/* Retour à la liste, en revenant directement sur la vignette de l'œuvre. */}}
+  <a class="back-link" href="{{ "exposition/" | absURL }}#{{ .Title | anchorize }}">← Toutes les œuvres</a>
   {{/* Carrousel : activé automatiquement dès qu'il existe des images carrousel-N.* (ou carousel-N.*) dans le dossier de l'œuvre, triées par N.
        Légendes facultatives : liste `carousel` dans le front matter, dans le même ordre. */}}
   {{ $slides := slice }}

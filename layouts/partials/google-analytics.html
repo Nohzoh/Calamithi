@@ -1,9 +1,43 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-30BGTTP14G"></script>
+{{/* Google Analytics, chargé uniquement après consentement (bandeau cookies, voir site.js).
+     Le choix est mémorisé 6 mois dans le navigateur ; sans réponse, rien n'est chargé. */}}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-30BGTTP14G');
+(function () {
+  var ID = "G-30BGTTP14G", KEY = "cookie-consent", MAX_AGE = 182 * 864e5, choice = null;
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (choice && Date.now() - choice.t > MAX_AGE) choice = null;
+  function load() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    window["ga-disable-" + ID] = false;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", ID);
+  }
+  function clearCookies() {
+    window["ga-disable-" + ID] = true;
+    var host = location.hostname, parts = host.split("."), domains = ["", host, "." + host];
+    for (var i = 1; i < parts.length - 1; i++) domains.push("." + parts.slice(i).join("."));
+    document.cookie.split(";").forEach(function (c) {
+      var name = c.split("=")[0].trim();
+      if (!/^_ga/.test(name)) return;
+      domains.forEach(function (d) {
+        document.cookie = name + "=; Max-Age=0; path=/" + (d ? "; domain=" + d : "");
+      });
+    });
+  }
+  window.cookieConsent = {
+    get: function () { return choice && choice.v; },
+    set: function (v) {
+      choice = { v: v, t: Date.now() };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      if (v === "granted") load(); else clearCookies();
+    }
+  };
+  if (choice && choice.v === "granted") load();
+})();
 </script>

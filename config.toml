@@ -18,6 +18,8 @@ canonifyURLs = false
   copyright_owner = "Calamithi"
   copyright_year = 2026
   contact_email = "calamithi@gmail.com"
+  # Phrase affichée dans le bas de page.
+  signature = "« Je photographie moins ce que je vois que ce que le regard finit par inventer. »"
   rights_statement = "Les photographies, textes et contenus de ce site ne peuvent être reproduits, distribués ou utilisés sans autorisation."
   watermark_enabled = false
   ogImage = "images/cover.jpg"

@@ -21,11 +21,36 @@
       </main>
 
       <footer class="site-footer">
-        <p>{{ .Site.Params.description }}</p>
-        <p>© {{ .Site.Params.copyright_year }} {{ .Site.Params.copyright_owner }}. Tous droits réservés.<br>{{ .Site.Params.rights_statement }}</p>
-        <p><a href="{{ "droits-utilisation/" | absURL }}">Droits d’utilisation</a></p>
-        <p><a href="{{ .Site.BaseURL }}">Retour à l’accueil</a></p>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="footer-name">{{ .Site.Params.copyright_owner }}</p>
+            {{ with .Site.Params.signature }}<p class="footer-signature">{{ . }}</p>{{ end }}
+          </div>
+          <nav class="footer-col" aria-label="Plan du site">
+            <p class="footer-heading">Explorer</p>
+            <ul>
+              <li><a href="{{ "exposition/" | absURL }}">Exposition</a></li>
+              <li><a href="{{ "propos/" | absURL }}">À propos</a></li>
+              <li><a href="{{ "caisse-americaine/" | absURL }}">La caisse américaine</a></li>
+            </ul>
+          </nav>
+          <div class="footer-col">
+            <p class="footer-heading">Contact</p>
+            <ul>
+              {{ with .Site.Params.contact.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+              {{ range .Site.Params.contact.socials }}<li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></li>{{ end }}
+            </ul>
+          </div>
+        </div>
+        <p class="footer-legal">© {{ .Site.Params.copyright_year }} {{ .Site.Params.copyright_owner }} · Tous droits réservés · <a href="{{ "droits-utilisation/" | absURL }}">Droits d’utilisation</a>{{ with site.GetPage "/mentions-legales" }} · <a href="{{ .Permalink }}">Mentions légales</a>{{ end }}{{ with site.GetPage "/cgv" }} · <a href="{{ .Permalink }}">CGV</a>{{ end }} · <a href="#" data-consent-open>Gestion des cookies</a></p>
       </footer>
+    </div>
+    <div class="consent-banner" data-consent-banner role="region" aria-label="Cookies" hidden>
+      <p>Ce site utilise des cookies de mesure d’audience (Google Analytics) pour savoir quelles œuvres vous intéressent, uniquement avec votre accord. Votre choix est conservé 6 mois. {{ with site.GetPage "/mentions-legales" }}<a href="{{ .Permalink }}#cookies">En savoir plus</a>{{ end }}</p>
+      <div class="consent-actions">
+        <button type="button" class="consent-button" data-consent="denied">Refuser</button>
+        <button type="button" class="consent-button" data-consent="granted">Accepter</button>
+      </div>
     </div>
     {{ with resources.Get "js/site.js" | minify | fingerprint }}<script src="{{ .RelPermalink | absURL }}"></script>{{ end }}
   </body>

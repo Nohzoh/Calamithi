@@ -95,3 +95,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Bandeau de consentement aux cookies (voir partials/google-analytics.html).
+(function () {
+  const banner = document.querySelector("[data-consent-banner]");
+  if (!banner || !window.cookieConsent) return;
+  if (!window.cookieConsent.get()) banner.hidden = false;
+  banner.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-consent]");
+    if (!button) return;
+    window.cookieConsent.set(button.dataset.consent);
+    banner.hidden = true;
+  });
+  document.querySelectorAll("[data-consent-open]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      banner.hidden = false;
+      banner.querySelector("button").focus();
+    });
+  });
+})();

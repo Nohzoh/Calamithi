@@ -112,7 +112,7 @@
           {{ with index . 0 }}
           <a class="button-primary buy-button" href="{{ .stripe_url }}" target="_blank" rel="noopener"><span>Acheter · <span data-buy-price>{{ index $prices 0 }}</span></span></a>
           {{ end }}
-          <p class="buy-note">Paiement sécurisé par Stripe{{ if $isCaisse }} · Livrée montée, prête à accrocher{{ end }}.</p>
+          <p class="buy-note">Paiement sécurisé par Stripe{{ if $isCaisse }} · Livrée montée, prête à accrocher{{ end }}.<br>Livraison en France uniquement : 32 € à 42 € selon le format, en sus.{{ with site.GetPage "/cgv" }} <a href="{{ .Permalink }}">Conditions de vente</a>{{ end }}</p>
           {{ if $isCaisse }}<p class="buy-note">Aussi disponible en caisse blanche, sur demande&nbsp;: <a class="inline-link" href="{{ "caisse-americaine/" | absURL }}">en savoir plus</a>.</p>{{ end }}
         </section>
         {{ end }}

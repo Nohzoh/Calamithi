@@ -1,0 +1,11 @@
+{{/* Photo principale d'une œuvre : l'image « hero », sinon la première image du carrousel. */}}
+{{ $img := "" }}
+{{ with .Params.hero }}{{ $img = $.Resources.GetMatch . }}{{ end }}
+{{ if not $img }}
+  {{ $slides := slice }}
+  {{ range .Resources.Match "{carrousel,carousel}-*" }}
+    {{ $slides = $slides | append (dict "n" (replaceRE `^.*-(\d+)\.[^.]+$` "$1" .Name | int) "img" .) }}
+  {{ end }}
+  {{ with sort $slides "n" }}{{ $img = (index . 0).img }}{{ end }}
+{{ end }}
+{{ return $img }}

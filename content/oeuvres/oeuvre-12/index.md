@@ -13,11 +13,11 @@ description: |
 
   À travers cette hybridation entre photographie et manipulation numérique, l’œuvre interroge la manière dont les images contemporaines peuvent devenir des paysages intérieurs : des territoires mouvants où mémoire visuelle, perception et imaginaire fusionnent dans une même expérience hypnotique.
 
-information: |
+informations: |
   Toile sans encadrement (choix artistique volontaire).
-  Édition limitée à 12 exemplaires, tous formats et supports confondus.
   Production 2026.
 
+edition: 12
 formats:
   - size: "40 x 50"
     price: "190.00 €"

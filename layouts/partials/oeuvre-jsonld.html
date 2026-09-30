@@ -1,0 +1,22 @@
+{{/* Données structurées schema.org : Google peut afficher l'œuvre avec son prix dans les résultats de recherche. */}}
+{{ $p := .page }}
+{{ $offers := slice }}
+{{ range $p.Params.formats }}
+  {{ $price := replaceRE `[^0-9.,]` "" .price | replaceRE `,` "." | float }}
+  {{ $size := replaceRE `^\s*(\d+(?:[.,]\d+)?\s*x\s*\d+(?:[.,]\d+)?)` "$1 cm" .size }}
+  {{ $offers = $offers | append (dict "@type" "Offer" "name" $size "price" $price "priceCurrency" "EUR" "availability" "https://schema.org/InStock" "url" $p.Permalink) }}
+{{ end }}
+{{ $data := dict
+  "@context" "https://schema.org"
+  "@type" (slice "VisualArtwork" "Product")
+  "name" $p.Title
+  "description" .description
+  "url" $p.Permalink
+  "artform" "Photographie"
+  "creator" (dict "@type" "Person" "name" site.Params.author)
+}}
+{{ with .image }}{{ $data = merge $data (dict "image" .Permalink) }}{{ end }}
+{{ with $p.Params.year }}{{ $data = merge $data (dict "dateCreated" (string .)) }}{{ end }}
+{{ with $p.Params.edition }}{{ $data = merge $data (dict "artEdition" .) }}{{ end }}
+{{ with $offers }}{{ $data = merge $data (dict "offers" .) }}{{ end }}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>

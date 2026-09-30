@@ -1,24 +1,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ $description := .Site.Params.description }}
+{{ with .Description }}{{ $description = . | plainify | replaceRE `\s+` " " | truncate 200 }}{{ end }}
+{{ $shareImage := partial "share-image.html" . }}
+<meta name="description" content="{{ $description }}">
 <meta name="copyright" content="{{ .Site.Params.copyright_owner }} © {{ .Site.Params.copyright_year }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{{ "css/styles.css" | absURL }}">
+{{/* Le nom du fichier change à chaque modification : les navigateurs ne gardent jamais une ancienne version en cache. */}}
+{{ with resources.Get "css/styles.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink | absURL }}">{{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:description" content="{{ $description }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+{{ with $shareImage }}
+<meta property="og:image" content="{{ .Permalink }}">
+<meta property="og:image:width" content="{{ .Width }}">
+<meta property="og:image:height" content="{{ .Height }}">
+<meta property="og:image:alt" content="{{ $.Title }}">
+{{ else }}{{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}{{ end }}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-{{ with .Site.Params.ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+<meta name="twitter:description" content="{{ $description }}">
+{{ with $shareImage }}<meta name="twitter:image" content="{{ .Permalink }}">{{ else }}{{ with .Site.Params.ogImage }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}{{ end }}
 <meta name="theme-color" content="{{ .Site.Params.themeColor }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | absURL }}">
+{{ if and .IsPage (eq .Section "oeuvres") }}{{ partial "oeuvre-jsonld.html" (dict "page" . "description" $description "image" $shareImage) }}{{ end }}
 {{ partial "google-analytics.html" . }}

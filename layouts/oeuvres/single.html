@@ -59,45 +59,90 @@
   </div>
   {{ with .Params.photographer }}<p class="image-credit">Photo : {{ . }}</p>{{ end }}
 
+  {{ $formats := .Params.formats | default slice }}
+  {{ $isCaisse := findRE `(?i)caisse américaine` (.Params.informations | default "") }}
+  {{/* Prix affiché à la française : « 220.00 € » devient « 220 € ». */}}
+  {{ $prices := slice }}
+  {{ $minPrice := "" }}{{ $minValue := 0 }}
+  {{ range $formats }}
+    {{ $p := replaceRE `[.,]00\b` "" .price }}
+    {{ $prices = $prices | append $p }}
+    {{ $v := replaceRE `[^0-9]` "" $p | int }}
+    {{ if or (eq $minPrice "") (lt $v $minValue) }}{{ $minPrice = $p }}{{ $minValue = $v }}{{ end }}
+  {{ end }}
+
   <div class="work-meta">
     <!-- p class="eyebrow">{{ .Params.series }}</p -->
-    <h1>{{ .Title }}</h1>
-    <p class="eyebrow">{{ .Params.year }} · {{ .Params.location }}</p>
-    <div class="work-summary">
+    <div class="work-heading">
+      <h1>{{ .Title }}</h1>
+      <p class="eyebrow">{{ .Params.year }} · {{ .Params.location }}</p>
+      {{ with $prices }}<a class="work-price-jump" href="#acquerir">{{ if gt (len .) 1 }}À partir de {{ end }}{{ $minPrice }} · Acquérir ↓</a>{{ end }}
+    </div>
+    <div class="work-layout">
       <div class="work-description">
         {{ .Description | markdownify }}
       </div>
-      <div>
-        <h2>Informations</h2>
-        {{/* Chaque mention « caisse américaine » renvoie vers la page qui la présente. */}}
-        {{ $caisseLink := printf `<a class="inline-link" href="%s">$1</a>` ("caisse-americaine/" | absURL) }}
-        <p>{{ replaceRE `(?i)(caisse américaine)` $caisseLink (.Params.informations | htmlEscape) | safeHTML }}</p>
-      </div>
-      {{ $formats := .Params.formats }}
-      {{ if not $formats }}
-        {{ $formats = slice }}
-      {{ end }}
-      {{ if gt (len $formats) 0 }}
-      <div>
-        <h2>Formats & Tarifs</h2>
-        <ul>
-          {{ range $formats }}
-            <li>
-              <span>{{ .size }} - {{ .price }}
-              {{ with .stripe_url }} <a class="format-link" href="{{ . }}" target="_blank" rel="noopener">[ 🛒 Acheter ↗️ ]</a>{{ end }}</span>
-            </li>
+      <aside class="work-aside">
+        {{ with $formats }}
+        <section class="buy-card" id="acquerir" data-buy>
+          <h2>Acquérir l’œuvre</h2>
+          {{ with $.Params.edition }}<p class="buy-edition">Édition limitée à {{ . }} exemplaires, tous formats et supports confondus.</p>{{ end }}
+          <fieldset class="buy-options">
+            <legend>Format</legend>
+            {{ range $i, $f := . }}
+              {{ $size := replaceRE `^\s*(\d+(?:[.,]\d+)?\s*x\s*\d+(?:[.,]\d+)?)` "$1 cm" $f.size }}
+              {{ $framed := "" }}
+              {{ if $isCaisse }}
+                {{ $dims := findRE `\d+(?:[.,]\d+)?` $f.size 2 }}
+                {{ if eq (len $dims) 2 }}
+                  {{ $w := add (float (replace (index $dims 0) "," ".")) 3.6 }}
+                  {{ $h := add (float (replace (index $dims 1) "," ".")) 3.6 }}
+                  {{ $framed = printf "%s x %s cm encadrée" (replace (lang.FormatNumber 1 $w) "." ",") (replace (lang.FormatNumber 1 $h) "." ",") }}
+                {{ end }}
+              {{ end }}
+              <label class="buy-option{{ if eq $i 0 }} is-selected{{ end }}">
+                <input type="radio" name="format" value="{{ $i }}" data-url="{{ $f.stripe_url }}" data-price="{{ index $prices $i }}"{{ if eq $i 0 }} checked{{ end }}>
+                <span class="buy-option-size">{{ $size }}{{ with $framed }}<small>{{ . }}</small>{{ end }}</span>
+                <span class="buy-option-price">{{ index $prices $i }}</span>
+              </label>
+            {{ end }}
+          </fieldset>
+          {{ with index . 0 }}
+          <a class="button-primary buy-button" href="{{ .stripe_url }}" target="_blank" rel="noopener"><span>Acheter · <span data-buy-price>{{ index $prices 0 }}</span></span></a>
           {{ end }}
-        </ul>
-      </div>
-      {{ end }}
+          <p class="buy-note">Paiement sécurisé par Stripe{{ if $isCaisse }} · Livrée montée, prête à accrocher{{ end }}.</p>
+          {{ if $isCaisse }}<p class="buy-note">Aussi disponible en caisse blanche, sur demande&nbsp;: <a class="inline-link" href="{{ "caisse-americaine/" | absURL }}">en savoir plus</a>.</p>{{ end }}
+        </section>
+        {{ end }}
+        {{ with .Params.informations }}
+        <section class="work-info">
+          <h2>Informations</h2>
+          {{/* Chaque mention « caisse américaine » renvoie vers la page qui la présente. */}}
+          {{ $caisseLink := printf `<a class="inline-link" href="%s">$1</a>` ("caisse-americaine/" | absURL) }}
+          <p>{{ replaceRE `(?i)(caisse américaine)` $caisseLink (. | htmlEscape) | safeHTML }}</p>
+        </section>
+        {{ end }}
+      </aside>
     </div>
   </div>
 
-  <div class="work-navigation" aria-label="Navigation entre œuvres">
-    {{ if gt $currentIndex 0 }}<a class="nav-link nav-prev" href="{{ (index $pages (sub $currentIndex 1)).Permalink }}">← Œuvre précédente</a>{{ end }}
-    <span class="progress-indicator">{{ $position }} / {{ len $pages }}</span>
-    {{ if lt $currentIndex (sub (len $pages) 1) }}<a class="nav-link nav-next" href="{{ (index $pages (add $currentIndex 1)).Permalink }}">Œuvre suivante →</a>{{ end }}
-  </div>
+  <nav class="work-navigation" aria-label="Navigation entre œuvres">
+    <p class="progress-indicator">Œuvre {{ $position }} sur {{ len $pages }}</p>
+    <div class="work-nav-cards">
+      {{ if gt $currentIndex 0 }}{{ with index $pages (sub $currentIndex 1) }}
+        <a class="work-nav-card nav-prev" href="{{ .Permalink }}">
+          {{ with .Resources.GetMatch .Params.thumbnail }}<img src="{{ (.Fill "160x160 Center").RelPermalink | absURL }}" alt="" width="64" height="64" loading="lazy">{{ end }}
+          <span><small>← Précédente</small><strong>{{ .Title }}</strong></span>
+        </a>
+      {{ end }}{{ end }}
+      {{ if lt $currentIndex (sub (len $pages) 1) }}{{ with index $pages (add $currentIndex 1) }}
+        <a class="work-nav-card nav-next" href="{{ .Permalink }}">
+          <span><small>Suivante →</small><strong>{{ .Title }}</strong></span>
+          {{ with .Resources.GetMatch .Params.thumbnail }}<img src="{{ (.Fill "160x160 Center").RelPermalink | absURL }}" alt="" width="64" height="64" loading="lazy">{{ end }}
+        </a>
+      {{ end }}{{ end }}
+    </div>
+  </nav>
 
   <div class="work-actions">
     <a class="text-link" href="{{ "exposition/" | absURL }}">Retour à la galerie</a>

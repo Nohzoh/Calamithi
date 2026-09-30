@@ -17,10 +17,10 @@ informations: |
   L’exemplaire présenté est encadré en aluminium avec passe-partout.
   Signature et numérotation apposées sur le passe-partout.
   Les autres exemplaires sont proposés sans encadrement, avec marge blanche pour signature et numérotation.
-  Édition limitée à 10 exemplaires, tous formats et supports confondus.
   Production 2026.
   Présentée à l’exposition Printemps des Arts 2026 · Villa Cathala, Noisy-le-Grand.
 
+edition: 10
 formats:
   - size: "40 x 60 (avec cadre)"
     price: "330.00 €"

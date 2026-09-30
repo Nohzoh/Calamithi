@@ -1,13 +1,21 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-subtitle: ""
-date: {{ .Date }}
+year: {{ now.Year }}
 thumbnail: "thumbnail.jpg"
 hero: "photo.jpg"
-series: "Série"
 location: "Lieu"
+
 description: |
-intention: ""
-context: ""
-order: 1
+  Texte de présentation de l’œuvre.
+
+informations: |
+  Toile montée en caisse américaine noire.
+  Production {{ now.Year }}.
+
+edition: 12
+formats:
+  - size: "20 x 30"
+    price: "220 €"
+    stripe_url: ""
+order: 99
 ---

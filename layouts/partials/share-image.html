@@ -1,0 +1,9 @@
+{{/* Image de partage (réseaux sociaux) : photo de l'œuvre, ou image indiquée par « image » dans le front matter. */}}
+{{ $img := "" }}
+{{ if and .IsPage (eq .Section "oeuvres") }}
+  {{ $img = partial "oeuvre-image.html" . }}
+{{ else }}
+  {{ with .Params.image }}{{ $img = $.Resources.GetMatch . }}{{ end }}
+{{ end }}
+{{ with $img }}{{ $img = .Resize "1200x" }}{{ end }}
+{{ return $img }}

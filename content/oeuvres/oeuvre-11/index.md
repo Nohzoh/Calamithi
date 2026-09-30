@@ -15,9 +15,9 @@ description: |
 
 informations: |
   Toile sans encadrement (choix artistique volontaire).
-  Édition limitée à 12 exemplaires, tous formats et supports confondus.
   Production 2026.
 
+edition: 12
 formats:
   - size: "40 x 50"
     price: "180.00 €"

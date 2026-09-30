@@ -66,6 +66,20 @@ document.addEventListener('DOMContentLoaded', function () {
     update();
   });
 
+  // Bloc d'achat : le bouton suit le format sélectionné.
+  document.querySelectorAll('[data-buy]').forEach((card) => {
+    const button = card.querySelector('.buy-button');
+    const price = card.querySelector('[data-buy-price]');
+    const inputs = card.querySelectorAll('input[name="format"]');
+    inputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        button.href = input.dataset.url;
+        price.textContent = input.dataset.price;
+        inputs.forEach((other) => other.closest('.buy-option').classList.toggle('is-selected', other === input));
+      });
+    });
+  });
+
   // Ces mesures sont uniquement dissuasives et ne constituent pas une protection technique réelle.
   document.querySelectorAll('img').forEach((img) => {
     img.addEventListener('contextmenu', function (event) {

@@ -14,9 +14,9 @@ description: |
 
 informations: |
   Toile montée en caisse américaine noire.
-  Édition limitée à 12 exemplaires, tous formats et supports confondus.
   Production 2026.
 
+edition: 12
 formats:
   - size: "30 x 20"
     price: "220.00 €"

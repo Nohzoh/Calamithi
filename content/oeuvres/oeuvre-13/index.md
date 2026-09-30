@@ -21,10 +21,10 @@ description: |
 
 informations: |
   Toile montée en caisse américaine noire.
-  Édition limitée à 12 exemplaires, tous formats et supports confondus.
   Production 2026.
   Présentée à l’exposition Entrez c'est ouvert 2026 · Halle Roublot, Fontenay-sous-Bois.
 
+edition: 12
 formats:
   - size: "20 x 30"
     price: "220 €"

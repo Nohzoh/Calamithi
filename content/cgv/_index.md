@@ -2,7 +2,7 @@
 title: "Conditions générales de vente"
 description: "Conditions de vente des tirages photographiques Calamithi : commande, paiement, livraison, rétractation et garanties."
 layout: "legal"
-updated: 2026-09-30
+updated: 2026-10-07
 ---
 
 ## 1. Objet
@@ -68,9 +68,15 @@ L’achat d’un tirage n’emporte aucune cession des droits d’auteur sur l�
 
 ## 10. Réclamations et médiation
 
-Pour toute réclamation, écrivez à [calamithi@gmail.com](mailto:calamithi@gmail.com). En l’absence de solution amiable, vous pouvez recourir gratuitement à un médiateur de la consommation :
+Pour toute réclamation, écrivez d’abord à [calamithi@gmail.com](mailto:calamithi@gmail.com).
 
-L’adhésion à un médiateur de la consommation est en cours ; ses coordonnées seront indiquées ici dès qu’elle sera effective.
+Si aucune réponse satisfaisante ne vous est apportée, vous pouvez recourir gratuitement à une procédure de médiation de la consommation, conformément aux articles L611-1 et suivants du Code de la consommation, auprès de :
+
+**CM2C**\
+49 rue de Ponthieu, 75008 Paris\
+Téléphone : 01 89 47 00 14\
+E-mail : [litiges@cm2c.net](mailto:litiges@cm2c.net)\
+Déclarer un litige en ligne : [cm2c.net/declarer-un-litige.php](https://www.cm2c.net/declarer-un-litige.php)
 
 ## 11. Droit applicable
 
